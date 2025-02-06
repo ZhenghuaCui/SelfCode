@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SqlSugarCore" Version="5.1.4.172" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Wuhua.IRepository\Wuhua.IRepository.csproj" />
+    <ProjectReference Include="..\Wuhua.IService\Wuhua.IService.csproj" />
+  </ItemGroup>
+
+</Project>

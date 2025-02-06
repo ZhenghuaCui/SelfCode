@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="WpfApp3.Views.IncreInjuryControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp3.Views"
+			 xmlns:Metro="clr-namespace:AduSkin.Controls.Metro;assembly=AduSkin"
+			 xmlns:AduAttach="clr-namespace:AduSkin.Controls.Attach;assembly=AduSkin"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+	<UserControl.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="ListBoxItemTemplate">
+				<StackPanel Orientation="Horizontal">
+					<Metro:MetroTextBlock Text="{Binding Title}" Foreground="{StaticResource DefaultBrush}" Width="50" Margin="3 2 " VerticalAlignment="Center" TextAlignment="Center" />
+					<Metro:MetroTextBlock Text="{Binding SelectedIncre.IncreName}" Foreground="{StaticResource DefaultBrush}" Width="70" Margin="3 2 " VerticalAlignment="Center" TextAlignment="Center" />
+					<Metro:MetroTextBox Text="{Binding IncreNum}" Width="50" Margin="3 2" />
+				</StackPanel>
+			</DataTemplate>
+		</ResourceDictionary>
+	</UserControl.Resources>
+	<!--增伤区-->
+	<StackPanel Orientation="Horizontal">
+		<GroupBox Header="全增伤">
+				<ListBox ItemsSource="{Binding AllHurtList}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" BorderThickness="0"
+								Style="{StaticResource StackPanelVerticalListBox}" ItemTemplate="{StaticResource ListBoxItemTemplate}">
+				</ListBox>
+			</GroupBox>
+			<GroupBox Header="攻击类型">
+			<ListBox ItemsSource="{Binding AtkTypeList}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" BorderThickness="0"
+								Style="{StaticResource StackPanelVerticalListBox}"  ItemTemplate="{StaticResource ListBoxItemTemplate}">
+				</ListBox>
+			</GroupBox>
+			<GroupBox Header="伤害类型">
+			<ListBox ItemsSource="{Binding DamageTypeList}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" BorderThickness="0"
+					 Style="{StaticResource StackPanelVerticalListBox}"  ItemTemplate="{StaticResource ListBoxItemTemplate}">
+				</ListBox>
+			</GroupBox>
+		<GroupBox Header="目标类型">
+			<ListBox ItemsSource="{Binding TargetTypeList}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" BorderThickness="0"
+					 Style="{StaticResource StackPanelVerticalListBox}"  ItemTemplate="{StaticResource ListBoxItemTemplate}">
+			</ListBox>
+		</GroupBox>
+	</StackPanel>
+</UserControl>

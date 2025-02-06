@@ -1,0 +1,153 @@
+﻿<UserControl x:Class="WpfApp3.Views.RolesInfoControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp3.Views"
+			 xmlns:converter="clr-namespace:WpfApp3.Common.Converter"
+             mc:Ignorable="d" 
+			 xmlns:Metro="clr-namespace:AduSkin.Controls.Metro;assembly=AduSkin" 
+			 xmlns:AduAttach="clr-namespace:AduSkin.Controls.Attach;assembly=AduSkin" 
+			 xmlns:prism="http://prismlibrary.com/"
+		     prism:ViewModelLocator.AutoWireViewModel="True">
+	<UserControl.Resources>
+        <ResourceDictionary>
+            <Style  TargetType="{x:Type Metro:MetroTextBox}">
+				<Setter Property="Width" Value="70"/>
+				<Setter Property="Margin" Value="3 2"/>
+			</Style>
+			<Style  TargetType="{x:Type Metro:MetroTextBlock}">
+				<Setter Property="Width" Value="50"/>
+				<Setter Property="Margin" Value="3 2"/>
+				<Setter Property="VerticalAlignment" Value="Center"/>
+				<Setter Property="TextAlignment" Value="Center"/>
+			</Style>
+			<DataTemplate x:Key="ListBoxItemTemplate">
+				<StackPanel Orientation="Horizontal">
+					<Metro:MetroTextBlock Text="{Binding Title}" Foreground="{StaticResource DefaultBrush}" Width="50" Margin="3 2 " VerticalAlignment="Center" TextAlignment="Center" />
+					<Metro:MetroTextBlock Text="{Binding SelectedIncre.IncreName}" Foreground="{StaticResource DefaultBrush}" Width="80" Margin="3 2 " VerticalAlignment="Center" TextAlignment="Center" />
+					<Metro:MetroTextBox Text="{Binding IncreNum}" Width="70" Margin="3 2" />
+				</StackPanel>
+			</DataTemplate>
+			<converter:AtkTypeEnumToStringConverter x:Key="AtkTypeEnumToStringConverter"/>
+			<converter:DamageTypeEnumToStringConverter x:Key="DamageTypeEnumToStringConverter"/>
+		</ResourceDictionary>
+	</UserControl.Resources>
+	<Grid>
+		<Metro:AduTabControl Grid.Row="2" BorderThickness="1" BorderBrush="{StaticResource ResourceKey=ShadowColor }">
+			<Metro:AduTabItem Header="器者攻击" >
+				<StackPanel Orientation="Horizontal">
+					<StackPanel Orientation="Vertical">
+						<GroupBox  DataContext="{Binding Role}" Header="初始攻击">
+							<StackPanel>
+								<StackPanel Orientation="Horizontal">
+									<Metro:MetroTextBlock Text="基础攻击" />
+									<Metro:MetroTextBox Text="{Binding BaseAtk}" />
+								</StackPanel>
+							</StackPanel>
+						</GroupBox>
+						<GroupBox  DataContext="{Binding Role}" Header="数值加成">
+							<StackPanel>
+								<StackPanel Orientation="Horizontal">
+									<Metro:MetroTextBlock Text="深造" />
+									<Metro:MetroTextBox Text="{Binding DeepAtk}" />
+								</StackPanel>
+								<StackPanel Orientation="Horizontal">
+									<Metro:MetroTextBlock Text="致知" />
+									<Metro:MetroTextBox Text="{Binding LifeAtk}" />
+								</StackPanel>
+								<StackPanel Orientation="Horizontal">
+									<Metro:MetroTextBlock Text="装备" />
+									<Metro:MetroTextBox Text="{Binding WeaponAtk}" />
+								</StackPanel>
+								<StackPanel Orientation="Horizontal">
+									<Metro:MetroTextBlock Text="共研" />
+									<Metro:MetroTextBox Text="{Binding CommonLearnAtk}" />
+								</StackPanel>
+							</StackPanel>
+
+
+						</GroupBox>
+					</StackPanel>
+					<GroupBox  DataContext="{Binding Role}" Header="百分比加成">
+						<StackPanel>
+							<StackPanel Orientation="Horizontal">
+								<Metro:MetroTextBlock Text="考核" />
+								<Metro:MetroTextBox Text="{Binding CoreAtkPer}" />
+							</StackPanel>
+							<StackPanel Orientation="Horizontal">
+								<Metro:MetroTextBlock Text="深造" />
+								<Metro:MetroTextBox Text="{Binding DeepAtkPer}" />
+							</StackPanel>
+							<StackPanel Orientation="Horizontal">
+								<Metro:MetroTextBlock Text="致知" />
+								<Metro:MetroTextBox Text="{Binding LifeAtkPer}" />
+							</StackPanel>
+							<StackPanel Orientation="Horizontal">
+								<Metro:MetroTextBlock Text="装备" />
+								<Metro:MetroTextBox Text="{Binding WeaponAtkPer}" />
+							</StackPanel>
+							<StackPanel Orientation="Horizontal">
+								<Metro:MetroTextBlock Text="研学" />
+								<Metro:MetroTextBox Text="{Binding LearnAtkPer}" />
+							</StackPanel>
+						</StackPanel>
+
+
+					</GroupBox>
+					<GroupBox Header="面板攻击" VerticalAlignment="Top" >
+						<Metro:MetroTextBox Text="{Binding RoleAtk}"/>
+					</GroupBox>
+				</StackPanel>
+			</Metro:AduTabItem>
+			<Metro:AduTabItem Header="攻击加成">
+				<StackPanel Orientation="Horizontal">
+					<GroupBox  Header="百分比加成">
+						<ListBox ItemsSource="{Binding AtkBonusPerList}" BorderThickness="0" ItemTemplate="{StaticResource ListBoxItemTemplate}" Style="{StaticResource StackPanelVerticalListBox}"/>
+					</GroupBox>
+					<GroupBox  Header="数值加成">
+						<ListBox ItemsSource="{Binding AtkBonusList}" BorderThickness="0" ItemTemplate="{StaticResource ListBoxItemTemplate}" Style="{StaticResource StackPanelVerticalListBox}"/>
+					</GroupBox>
+				</StackPanel>
+			</Metro:AduTabItem>
+			<Metro:AduTabItem Header="技能倍率">
+				<GroupBox  Header="百分比加成">
+					<ListView ItemsSource="{Binding SkillMultiList}" BorderThickness="0" Style="{StaticResource StackPanelVerticalListBox}" >
+						<ListView.ItemTemplate>
+							<DataTemplate>
+								<StackPanel Orientation="Horizontal">
+									<Metro:MetroTextBlock Text="{Binding AtkType, Converter={StaticResource AtkTypeEnumToStringConverter}}" Foreground="{StaticResource DefaultBrush}" Margin="10,4"/>
+									<Metro:MetroTextBlock Text="{Binding DamageType, Converter={StaticResource DamageTypeEnumToStringConverter}}" Foreground="{StaticResource DefaultBrush}" Margin="10,4"/>
+									<Metro:MetroTextBlock Text="{Binding DamageTimes}" Foreground="{StaticResource DefaultBrush}" Margin="10,4"/>
+									<Metro:MetroTextBlock Text="{Binding SkillNum}" Foreground="{StaticResource DefaultBrush}" Margin="10,4"/>
+								</StackPanel>
+							</DataTemplate>
+						</ListView.ItemTemplate>
+					</ListView>
+				</GroupBox>
+			</Metro:AduTabItem>
+			<Metro:AduTabItem Header="穿防加成">
+				<GroupBox  Header="穿防加成">
+					<ListBox ItemsSource="{Binding DefPeneList}" BorderThickness="0" ItemTemplate="{StaticResource ListBoxItemTemplate}" Style="{StaticResource StackPanelVerticalListBox}"/>
+				</GroupBox>
+			</Metro:AduTabItem>
+			<Metro:AduTabItem Header="暴击率">
+				<GroupBox  Header="暴击率加成">
+					<ListBox ItemsSource="{Binding CraticalBonusList}" BorderThickness="0" ItemTemplate="{StaticResource ListBoxItemTemplate}" Style="{StaticResource StackPanelVerticalListBox}"/>
+				</GroupBox>
+			</Metro:AduTabItem>
+			<Metro:AduTabItem Header="暴伤加成">
+				<GroupBox  Header="暴伤加成">
+					<ListBox ItemsSource="{Binding CraticalHurtList}" BorderThickness="0" ItemTemplate="{StaticResource ListBoxItemTemplate}" Style="{StaticResource StackPanelVerticalListBox}"/>
+				</GroupBox>
+			</Metro:AduTabItem>
+
+			<Metro:AduTabItem Header="增伤加成">
+				<local:IncreInjuryControl />
+			</Metro:AduTabItem>
+			<Metro:AduTabItem Header="易伤加成">
+				<local:VulnerabilityControl/>
+			</Metro:AduTabItem>
+		</Metro:AduTabControl>
+	</Grid>
+</UserControl>

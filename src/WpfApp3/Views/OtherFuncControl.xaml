@@ -1,0 +1,50 @@
+﻿<Window x:Class="Wuhua.Main.Views.OtherFuncControl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wuhua.Main.Views"
+        xmlns:AduSkin="clr-namespace:AduSkin.Controls.Metro;assembly=AduSkin"
+		xmlns:AduAttach="clr-namespace:AduSkin.Controls.Attach;assembly=AduSkin"
+		xmlns:converter ="clr-namespace:WpfApp3.Common.Converter"
+		xmlns:prism="http://prismlibrary.com/"
+        mc:Ignorable="d"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        Title="其他" WindowStartupLocation="CenterOwner"
+        Height="280" Width="420">
+    <Window.Resources>
+        <ResourceDictionary>
+            <converter:InverseVisibilityConverter x:Key="InverseVisibilityConverter"/>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Border Background="{StaticResource ShadowColor}" >
+            <Grid>
+                <Grid x:Name="ChoosePage">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                    </Grid.ColumnDefinitions>
+                    <AduSkin:AduFlatButton Width="80" Height="30" Margin="2" Click="CountBest_Click" Content="计算最佳词条"/>
+                </Grid>
+                <ContentControl x:Name="transeperControl"/>
+                <Border x:Name="MunuBorder" Background="{StaticResource ShadowColor}" VerticalAlignment="Bottom" Visibility="Collapsed" BorderBrush="White" BorderThickness="0,1,0,0">
+                    <AduSkin:AduFlatButton  x:Name="startButton"  Click="StartCount"  
+						VerticalAlignment="Center" Background="White" Width="130" BorderThickness="1" BorderBrush="{StaticResource ShadowColor}" Foreground="{StaticResource ShadowColor}">
+                        <AduSkin:AduFlatButton.ContentTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <AduSkin:MetroTextBlock  Text="计算结果" VerticalAlignment="Center" Margin="6" />
+                                    <AduSkin:AduPathIconButton  AduAttach:PathDataAttach.PathData="{StaticResource Icon_RightArrow}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </AduSkin:AduFlatButton.ContentTemplate>
+                    </AduSkin:AduFlatButton>
+                </Border>
+
+            </Grid>
+        </Border>
+
+
+</Window>

@@ -1,0 +1,84 @@
+﻿<UserControl x:Class="WpfApp3.Views.TeamControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+			 xmlns:Metro="clr-namespace:AduSkin.Controls.Metro;assembly=AduSkin" 
+			 xmlns:AduAttach="clr-namespace:AduSkin.Controls.Attach;assembly=AduSkin"
+             xmlns:local="clr-namespace:WpfApp3.Views"
+			 xmlns:prism="http://prismlibrary.com/"
+			 prism:ViewModelLocator.AutoWireViewModel="True"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" >
+	<UserControl.Resources>
+        <ResourceDictionary>
+            <Metro:MetroContextMenu x:Key="teamContextMenu">
+				<Metro:MetroMenuItem>
+					<Metro:AduFlatButton Content="Delete"/>
+				</Metro:MetroMenuItem>
+			</Metro:MetroContextMenu>
+		</ResourceDictionary>
+	</UserControl.Resources>
+	<Grid>
+		<ListView ItemsSource="{Binding TeamList}" x:Name="teamLlist" BorderThickness="0"  HorizontalContentAlignment="Left" HorizontalAlignment="Left"
+											 Style="{StaticResource StackPanelVerticalListBox}" SelectedIndex="0"
+											  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="25"/>
+							<ColumnDefinition Width="150"/>
+							<ColumnDefinition Width="130"/>
+							<ColumnDefinition Width="30"/>
+						</Grid.ColumnDefinitions>
+						<Metro:AduRadioButton IsChecked="{Binding IsChecked, Mode=TwoWay}" GroupName="Role"/>
+						<Metro:AduComboBox Grid.Column="1" Margin="2"
+										   ItemsSource="{Binding RolesList, Mode=TwoWay}" SelectedItem="{Binding SelectedRole}">
+							<Metro:AduComboBox.ItemTemplate>
+								<DataTemplate>
+									<StackPanel Orientation="Horizontal">
+										<Metro:MetroTextBlock Text="{Binding RoleName}"  Width="120" VerticalAlignment="Center"  Foreground="{StaticResource DefaultBrush}"/>
+										<Metro:AduFlatButton Content="X" x:Name="DelRole" VerticalAlignment="Center" Command="{Binding RelativeSource={RelativeSource AncestorType=ListView},Path= DataContext.DeleRoleCommand}" CommandParameter="{Binding ElementName=DelRole, Path=DataContext}" Background="Transparent" Foreground="{StaticResource DefaultBrush}" Width="10" HorizontalAlignment="Right"/>
+									</StackPanel>
+								</DataTemplate>
+							</Metro:AduComboBox.ItemTemplate>
+						</Metro:AduComboBox>
+						<Metro:AduComboBox Grid.Column="2" Margin="2" ItemsSource="{Binding CustomWeaponList, Mode=TwoWay}" SelectedItem="{Binding SelectedWeapon, Mode=TwoWay}" SelectedIndex="0" >
+							<Metro:AduComboBox.ItemTemplate>
+								<DataTemplate>
+									<StackPanel Orientation="Horizontal">
+										<Metro:MetroTextBlock Text="{Binding Weapon}" VerticalAlignment="Center" Width="100"  Foreground="{StaticResource DefaultBrush}">
+											<Metro:MetroTextBlock.ToolTip>
+												<StackPanel>
+													<StackPanel Orientation="Horizontal" Margin="6,0">
+														<Metro:MetroTextBlock Text="基础:"/>
+														<Metro:MetroTextBlock Text="{Binding BaseAtk}"/>
+													</StackPanel>
+													<ListView BorderThickness="0" Background="Transparent" ItemsSource="{Binding WeaponEfList}"  >
+														<ListView.ItemTemplate>
+															<DataTemplate>
+																<StackPanel Orientation="Horizontal">
+																	<Metro:MetroTextBlock Text="{Binding SelectedIncre.IncreName}"/>
+																	<Metro:MetroTextBlock Text=":"/>
+																	<Metro:MetroTextBlock Text="{Binding SelectedIncre.IncreNum}"/>
+																</StackPanel>
+															</DataTemplate>
+														</ListView.ItemTemplate>
+													</ListView>
+												</StackPanel>
+											</Metro:MetroTextBlock.ToolTip>
+										</Metro:MetroTextBlock>
+										<Metro:AduFlatButton Content="X" x:Name="DelButton" VerticalAlignment="Center" Command="{Binding RelativeSource={RelativeSource AncestorType=ListView},Path= DataContext.DeleWeaponCommand}" CommandParameter="{Binding ElementName=DelButton, Path=DataContext}" Background="Transparent" Foreground="{StaticResource DefaultBrush}" Width="10" HorizontalAlignment="Right"/>
+									</StackPanel>
+								</DataTemplate>
+							</Metro:AduComboBox.ItemTemplate>
+						</Metro:AduComboBox>
+						<Metro:AduFlatButton Grid.Column="3" Width="30" BorderBrush="{StaticResource ResourceKey=DefaultBrush}" Foreground="{StaticResource ResourceKey=DefaultBrush}" Background="Transparent" Content="清除" Command="{Binding ClearCommand}" />
+					</Grid>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+            
+    </Grid>
+</UserControl>

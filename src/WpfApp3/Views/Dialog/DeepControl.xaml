@@ -1,0 +1,148 @@
+﻿<Window x:Class="WpfApp3.Views.DeepControl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3.Views"
+        mc:Ignorable="d"
+		xmlns:Metro="clr-namespace:AduSkin.Controls.Metro;assembly=AduSkin"
+		xmlns:AduAttach="clr-namespace:AduSkin.Controls.Attach;assembly=AduSkin"
+		xmlns:prism="http://prismlibrary.com/"
+		prism:ViewModelLocator.AutoWireViewModel="True"
+		AllowsTransparency="True"  WindowStyle="None" BorderThickness="0"
+	    OpacityMask="White" ResizeMode="NoResize" WindowStartupLocation="CenterOwner"
+        Title="深造" x:Name="DeepWindow" Height="280" Width="420">
+    <Window.Style>
+		<Style TargetType="Window">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="Window">
+						<Border Background="White" BorderThickness="0" CornerRadius="5" Opacity="0.95">
+							<ContentPresenter/>
+						</Border>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+
+	</Window.Style>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="auto"/>
+			<RowDefinition Height=" 40"/>
+		</Grid.RowDefinitions>
+		<Border x:Name="DeepBorder"   BorderBrush="{StaticResource DefaultBorderBrush}" BorderThickness="1" CornerRadius="15" Opacity="0.9">
+			<Metro:AduNavigationPanel x:Name="navigationPanel" MaxHeight="240" MaxWidth="400" VerticalAlignment="Bottom"
+								  AduAttach:BackgroundAttach.SelectedBackground="Red"
+									  Foreground="{StaticResource DefaultBrush}"
+								  IndicatorMargin="0" IndicatorHorizontalAlignment="Center"
+									  IndicatorSelectedIndex="0" IndicatorPlacement="Left">
+				<Metro:MetroScrollViewer HorizontalScrollBarVisibility="Disabled">
+					<StackPanel>
+						<Metro:AduGroupBoxLight Header="常规" Foreground="{StaticResource DefaultBrush}"  HeaderBackground="Transparent"  BorderBrush="{StaticResource DefaultBorderBrush}" Height="210" FontSize="14" Padding="10,6">
+							<Grid>
+								<Grid.RowDefinitions>
+									<RowDefinition Height="auto"/>
+									<RowDefinition Height="auto"/>
+								</Grid.RowDefinitions>
+								<Grid>
+									<Grid.RowDefinitions>
+										<RowDefinition Height="34"/>
+										<RowDefinition Height="34"/>
+									</Grid.RowDefinitions>
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition Width="50"/>
+										<ColumnDefinition Width="auto"/>
+									</Grid.ColumnDefinitions>
+									<TextBlock  Foreground="{StaticResource DefaultBrush}" Text="深造名" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+									<Metro:MetroTextBox Grid.Column="1"  Margin="12 3"  Width="120" MaxLength="10" Text="{Binding DeepName}"/>
+									<TextBlock Grid.Row="1"  Foreground="{StaticResource DefaultBrush}" Text="职业" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+									<Metro:AduComboBox Grid.Row="1" Grid.Column="1"  Margin="12 3"  Width="120" ItemsSource="{Binding OccupationList}" 
+													   SelectedValuePath="Key" 
+														DisplayMemberPath="Value" SelectedValue="{Binding SelectedOccupation,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" 
+													    >
+									</Metro:AduComboBox>
+								</Grid>
+								<StackPanel Grid.Row="1">
+									<ListBox ItemsSource="{Binding CoreIncreList,UpdateSourceTrigger=PropertyChanged}" BorderThickness="1" Width="230" Height="320" HorizontalContentAlignment="Left" HorizontalAlignment="Left"
+											 Style="{StaticResource StackPanelVerticalListBox}" SelectedIndex="0"
+											  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+											  >
+										<ListBox.ItemTemplate>
+											<DataTemplate>
+												<Grid>
+													<Grid.ColumnDefinitions>
+														<ColumnDefinition Width="50"/>
+														<ColumnDefinition Width="auto"/>
+														<ColumnDefinition Width="auto"/>
+													</Grid.ColumnDefinitions>
+													<Metro:MetroTextBlock  Text="核心" Foreground="{StaticResource DefaultBrush}" Margin="3" Height="26"  Width="60" />
+													<Metro:AduComboBox Grid.Column="1" Width="110" Height="13" Margin="12,0,3,0" ItemsSource="{Binding IncreInfoList,Mode=TwoWay}"  SelectedItem="{Binding SelectedIncre,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" >
+														<Metro:AduComboBox.ItemTemplate>
+															<DataTemplate>
+																<TextBlock Text="{Binding IncreName ,Mode=TwoWay}" FontSize="12"/>
+															</DataTemplate>
+														</Metro:AduComboBox.ItemTemplate>
+													</Metro:AduComboBox>
+													<Metro:MetroTextBox Grid.Column="2"   Text="{Binding IncreNum,Mode=TwoWay}" Margin="3" Height="26"  Width="50" >
+													</Metro:MetroTextBox>
+												</Grid>
+											</DataTemplate>
+										</ListBox.ItemTemplate>
+									</ListBox>
+								</StackPanel>
+							</Grid>
+						</Metro:AduGroupBoxLight>
+						<Metro:AduGroupBoxLight Header="加成" Foreground="{StaticResource DefaultBrush}" HeaderBackground="Transparent"  BorderBrush="{StaticResource DefaultBorderBrush}"  FontSize="14" Padding="10,6">
+							<StackPanel>
+								<Grid Margin="0,8">
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition Width="104"/>
+										<ColumnDefinition Width="100"/>
+									</Grid.ColumnDefinitions>
+									<TextBlock Grid.Column="0" Foreground="{StaticResource DefaultBrush}" Text="效果" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+									<TextBlock Grid.Column="1" Foreground="{StaticResource DefaultBrush}" Text="数值" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+								</Grid>
+								<ListBox x:Name="IncreList" ItemsSource="{Binding RoleIncreList,Mode=TwoWay}"  BorderThickness="0" Width="240"  HorizontalContentAlignment="Left" HorizontalAlignment="Left"
+											 Style="{StaticResource StackPanelVerticalListBox}" SelectedIndex="0"
+											  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+											  >
+									<ListBox.ItemTemplate>
+										<DataTemplate>
+											<Grid>
+												<Grid.ColumnDefinitions>
+													<ColumnDefinition Width="110"/>
+													<ColumnDefinition Width="100"/>
+												</Grid.ColumnDefinitions>
+												<Metro:AduComboBox Grid.Column="0" Width="104" Height="13" Margin="3,0" ItemsSource="{Binding IncreInfoList}"  SelectedItem="{Binding SelectedIncre,Mode=TwoWay}">
+													<Metro:AduComboBox.ItemTemplate>
+														<DataTemplate>
+															<TextBlock Text="{Binding IncreName,Mode=TwoWay}" FontSize="12"/>
+														</DataTemplate>
+													</Metro:AduComboBox.ItemTemplate>
+												</Metro:AduComboBox>
+												<Metro:MetroTextBox   Grid.Column="1"   Text="{Binding IncreNum,Mode=TwoWay}" Margin="3" Height="26"  Width="94" >
+												</Metro:MetroTextBox>
+											</Grid>
+										</DataTemplate>
+									</ListBox.ItemTemplate>
+								</ListBox>
+								<Metro:AduFlatButton Command="{Binding AddIncreItemCommand}" Content="➕" Height="25" Background="Transparent" Foreground="{StaticResource DefaultBrush}"/>
+							</StackPanel>
+						</Metro:AduGroupBoxLight>
+					</StackPanel>
+				</Metro:MetroScrollViewer>
+			</Metro:AduNavigationPanel>
+		</Border>
+		<Grid Grid.Row="1">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+			<Metro:AduFlatButton Content="取消" Background="Transparent" Foreground="{StaticResource DefaultBrush}" Command="{Binding CancelCommand}"  CommandParameter="{Binding ElementName=DeepWindow}"
+								 BorderThickness="1" BorderBrush="{StaticResource DefaultBrush}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+			<Metro:AduFlatButton Grid.Column="1" Background="Transparent" Foreground="{StaticResource DefaultBrush}" Command="{Binding SaveDeepCommmand}"  CommandParameter="{Binding ElementName=DeepWindow}"
+								 BorderThickness="1" BorderBrush="{StaticResource DefaultBrush}" Content="确定"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+		</Grid>
+	</Grid>
+</Window>

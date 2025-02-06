@@ -1,0 +1,599 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Projects\\2025\\Wuhua\\src\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\styles\\globalresources.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\styles\\globalresources.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\styles\\metro\\adulistbox.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\styles\\metro\\adulistbox.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\views\\dialog\\addroles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\views\\dialog\\addroles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\views\\otherfunccontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\views\\otherfunccontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\views\\outputcontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\views\\outputcontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\views\\teamcontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\views\\teamcontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\views\\teamcontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\views\\teamcontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\views\\dialog\\addweapon.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\views\\dialog\\addweapon.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\views\\dialog\\deepcontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\views\\dialog\\deepcontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\views\\countweaponcontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\views\\countweaponcontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\views\\damageoutcontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\views\\damageoutcontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\views\\increinjurycontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\views\\increinjurycontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\views\\learncontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\views\\learncontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\views\\rolesinfocontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\views\\rolesinfocontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\views\\vulnerabilitycontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\views\\vulnerabilitycontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\roles\\rolesbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\roles\\rolesbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\roles\\mogaogrottoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\roles\\mogaogrottoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\data\\customshowweapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\data\\customshowweapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\data\\monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\data\\monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\common\\permutationandcombination.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\common\\permutationandcombination.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\common\\commonstaticsource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\common\\commonstaticsource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\common\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\common\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\common\\commonsource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\common\\commonsource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\common\\converter\\enumtostringconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\common\\converter\\enumtostringconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\common\\converter\\damagetypeenumtostringconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\common\\converter\\damagetypeenumtostringconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\common\\converter\\atktypeenumtostringconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\common\\converter\\atktypeenumtostringconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\events\\countdamagestartevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\events\\countdamagestartevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\events\\weaponaddedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\events\\weaponaddedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\events\\sendinfomessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\events\\sendinfomessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\events\\countweaponevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\events\\countweaponevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\data\\teamdisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\data\\teamdisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|c:\\projects\\2025\\wuhua\\src\\wpfapp3\\wuhua.main.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{ECD0C3C7-6AC8-42E1-86E2-34EDB2369119}|WpfApp3\\Wuhua.Main.csproj|solutionrelative:wpfapp3\\wuhua.main.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AduListBox.xaml",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Styles\\Metro\\AduListBox.xaml",
+              "RelativeDocumentMoniker": "WpfApp3\\Styles\\Metro\\AduListBox.xaml",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Styles\\Metro\\AduListBox.xaml",
+              "RelativeToolTip": "WpfApp3\\Styles\\Metro\\AduListBox.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-06T06:38:21.081Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OtherFuncControl.xaml",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Views\\OtherFuncControl.xaml",
+              "RelativeDocumentMoniker": "WpfApp3\\Views\\OtherFuncControl.xaml",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Views\\OtherFuncControl.xaml",
+              "RelativeToolTip": "WpfApp3\\Views\\OtherFuncControl.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-06T05:33:20.979Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OutputControl.xaml",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Views\\OutputControl.xaml",
+              "RelativeDocumentMoniker": "WpfApp3\\Views\\OutputControl.xaml",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Views\\OutputControl.xaml",
+              "RelativeToolTip": "WpfApp3\\Views\\OutputControl.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwsAAABoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-06T05:33:29.595Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AddRoles.xaml",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Views\\Dialog\\AddRoles.xaml",
+              "RelativeDocumentMoniker": "WpfApp3\\Views\\Dialog\\AddRoles.xaml",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Views\\Dialog\\AddRoles.xaml",
+              "RelativeToolTip": "WpfApp3\\Views\\Dialog\\AddRoles.xaml",
+              "ViewState": "AgIAAL0AAAAAAAAAAAAowBAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-06T05:32:01.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GlobalResources.xaml",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Styles\\GlobalResources.xaml",
+              "RelativeDocumentMoniker": "WpfApp3\\Styles\\GlobalResources.xaml",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Styles\\GlobalResources.xaml",
+              "RelativeToolTip": "WpfApp3\\Styles\\GlobalResources.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-06T05:30:53.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Views\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "WpfApp3\\Views\\MainWindow.xaml",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Views\\MainWindow.xaml",
+              "RelativeToolTip": "WpfApp3\\Views\\MainWindow.xaml",
+              "ViewState": "AgIAACAAAAAAAAAAAAAuwAYAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-05T07:31:22.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Views\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp3\\Views\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Views\\MainWindow.xaml.cs",
+              "RelativeToolTip": "WpfApp3\\Views\\MainWindow.xaml.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAIwBwAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T06:29:16.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TeamControl.xaml.cs",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Views\\TeamControl.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp3\\Views\\TeamControl.xaml.cs",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Views\\TeamControl.xaml.cs",
+              "RelativeToolTip": "WpfApp3\\Views\\TeamControl.xaml.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAADwvxsAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T06:26:42.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AddWeapon.xaml",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Views\\Dialog\\AddWeapon.xaml",
+              "RelativeDocumentMoniker": "WpfApp3\\Views\\Dialog\\AddWeapon.xaml",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Views\\Dialog\\AddWeapon.xaml",
+              "RelativeToolTip": "WpfApp3\\Views\\Dialog\\AddWeapon.xaml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-06T05:32:38.514Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DeepControl.xaml",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Views\\Dialog\\DeepControl.xaml",
+              "RelativeDocumentMoniker": "WpfApp3\\Views\\Dialog\\DeepControl.xaml",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Views\\Dialog\\DeepControl.xaml",
+              "RelativeToolTip": "WpfApp3\\Views\\Dialog\\DeepControl.xaml",
+              "ViewState": "AgIAAAMAAAAAAAAAAADwvw0AAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-06T05:32:43.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TeamControl.xaml",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Views\\TeamControl.xaml",
+              "RelativeDocumentMoniker": "WpfApp3\\Views\\TeamControl.xaml",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Views\\TeamControl.xaml",
+              "RelativeToolTip": "WpfApp3\\Views\\TeamControl.xaml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-05T07:31:36.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CountWeaponControl.xaml",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Views\\CountWeaponControl.xaml",
+              "RelativeDocumentMoniker": "WpfApp3\\Views\\CountWeaponControl.xaml",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Views\\CountWeaponControl.xaml",
+              "RelativeToolTip": "WpfApp3\\Views\\CountWeaponControl.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwwAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-06T05:32:49.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DamageOutControl.xaml",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Views\\DamageOutControl.xaml",
+              "RelativeDocumentMoniker": "WpfApp3\\Views\\DamageOutControl.xaml",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Views\\DamageOutControl.xaml",
+              "RelativeToolTip": "WpfApp3\\Views\\DamageOutControl.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-06T05:32:55.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IncreInjuryControl.xaml",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Views\\IncreInjuryControl.xaml",
+              "RelativeDocumentMoniker": "WpfApp3\\Views\\IncreInjuryControl.xaml",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Views\\IncreInjuryControl.xaml",
+              "RelativeToolTip": "WpfApp3\\Views\\IncreInjuryControl.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-06T05:33:04.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "LearnControl.xaml",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Views\\LearnControl.xaml",
+              "RelativeDocumentMoniker": "WpfApp3\\Views\\LearnControl.xaml",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Views\\LearnControl.xaml",
+              "RelativeToolTip": "WpfApp3\\Views\\LearnControl.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvw0AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-06T05:33:09.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "RolesInfoControl.xaml",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Views\\RolesInfoControl.xaml",
+              "RelativeDocumentMoniker": "WpfApp3\\Views\\RolesInfoControl.xaml",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Views\\RolesInfoControl.xaml",
+              "RelativeToolTip": "WpfApp3\\Views\\RolesInfoControl.xaml",
+              "ViewState": "AgIAAAMAAAAAAAAAAADwvw0AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-06T05:33:33.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\App.xaml",
+              "RelativeDocumentMoniker": "WpfApp3\\App.xaml",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\App.xaml",
+              "RelativeToolTip": "WpfApp3\\App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-06T06:04:10.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "VulnerabilityControl.xaml",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Views\\VulnerabilityControl.xaml",
+              "RelativeDocumentMoniker": "WpfApp3\\Views\\VulnerabilityControl.xaml",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Views\\VulnerabilityControl.xaml",
+              "RelativeToolTip": "WpfApp3\\Views\\VulnerabilityControl.xaml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-06T05:33:47.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Monster.cs",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Data\\Monster.cs",
+              "RelativeDocumentMoniker": "WpfApp3\\Data\\Monster.cs",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Data\\Monster.cs",
+              "RelativeToolTip": "WpfApp3\\Data\\Monster.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAQwDEAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T08:04:32.817Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "PermutationAndCombination.cs",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Common\\PermutationAndCombination.cs",
+              "RelativeDocumentMoniker": "WpfApp3\\Common\\PermutationAndCombination.cs",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Common\\PermutationAndCombination.cs",
+              "RelativeToolTip": "WpfApp3\\Common\\PermutationAndCombination.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T08:05:24.192Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "MogaoGrottoes.cs",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Roles\\MogaoGrottoes.cs",
+              "RelativeDocumentMoniker": "WpfApp3\\Roles\\MogaoGrottoes.cs",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Roles\\MogaoGrottoes.cs",
+              "RelativeToolTip": "WpfApp3\\Roles\\MogaoGrottoes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIBAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T07:21:50.339Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "RolesBase.cs",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Roles\\RolesBase.cs",
+              "RelativeDocumentMoniker": "WpfApp3\\Roles\\RolesBase.cs",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Roles\\RolesBase.cs",
+              "RelativeToolTip": "WpfApp3\\Roles\\RolesBase.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwDoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T08:08:26.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CustomShowWeapon.cs",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Data\\CustomShowWeapon.cs",
+              "RelativeDocumentMoniker": "WpfApp3\\Data\\CustomShowWeapon.cs",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Data\\CustomShowWeapon.cs",
+              "RelativeToolTip": "WpfApp3\\Data\\CustomShowWeapon.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAxwAkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T08:04:31.937Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "CommonStaticSource.cs",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Common\\CommonStaticSource.cs",
+              "RelativeDocumentMoniker": "WpfApp3\\Common\\CommonStaticSource.cs",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Common\\CommonStaticSource.cs",
+              "RelativeToolTip": "WpfApp3\\Common\\CommonStaticSource.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T08:05:08.887Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Enums.cs",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Common\\Enums.cs",
+              "RelativeDocumentMoniker": "WpfApp3\\Common\\Enums.cs",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Common\\Enums.cs",
+              "RelativeToolTip": "WpfApp3\\Common\\Enums.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T08:05:21.817Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "CommonSource.cs",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Common\\CommonSource.cs",
+              "RelativeDocumentMoniker": "WpfApp3\\Common\\CommonSource.cs",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Common\\CommonSource.cs",
+              "RelativeToolTip": "WpfApp3\\Common\\CommonSource.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T08:05:04.091Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "EnumToStringConverter.cs",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Common\\Converter\\EnumToStringConverter.cs",
+              "RelativeDocumentMoniker": "WpfApp3\\Common\\Converter\\EnumToStringConverter.cs",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Common\\Converter\\EnumToStringConverter.cs",
+              "RelativeToolTip": "WpfApp3\\Common\\Converter\\EnumToStringConverter.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T08:05:00.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "DamageTypeEnumToStringConverter.cs",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Common\\Converter\\DamageTypeEnumToStringConverter.cs",
+              "RelativeDocumentMoniker": "WpfApp3\\Common\\Converter\\DamageTypeEnumToStringConverter.cs",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Common\\Converter\\DamageTypeEnumToStringConverter.cs",
+              "RelativeToolTip": "WpfApp3\\Common\\Converter\\DamageTypeEnumToStringConverter.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T08:04:55.567Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "AtkTypeEnumToStringConverter.cs",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Common\\Converter\\AtkTypeEnumToStringConverter.cs",
+              "RelativeDocumentMoniker": "WpfApp3\\Common\\Converter\\AtkTypeEnumToStringConverter.cs",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Common\\Converter\\AtkTypeEnumToStringConverter.cs",
+              "RelativeToolTip": "WpfApp3\\Common\\Converter\\AtkTypeEnumToStringConverter.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAIwBUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T08:04:40.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "WeaponAddedEvent.cs",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Events\\WeaponAddedEvent.cs",
+              "RelativeDocumentMoniker": "WpfApp3\\Events\\WeaponAddedEvent.cs",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Events\\WeaponAddedEvent.cs",
+              "RelativeToolTip": "WpfApp3\\Events\\WeaponAddedEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwcAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T08:04:09.418Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "SendInfoMessage.cs",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Events\\SendInfoMessage.cs",
+              "RelativeDocumentMoniker": "WpfApp3\\Events\\SendInfoMessage.cs",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Events\\SendInfoMessage.cs",
+              "RelativeToolTip": "WpfApp3\\Events\\SendInfoMessage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T08:04:00.369Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "CountWeaponEvent.cs",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Events\\CountWeaponEvent.cs",
+              "RelativeDocumentMoniker": "WpfApp3\\Events\\CountWeaponEvent.cs",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Events\\CountWeaponEvent.cs",
+              "RelativeToolTip": "WpfApp3\\Events\\CountWeaponEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T08:03:39.759Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "CountDamageStartEvent.cs",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Events\\CountDamageStartEvent.cs",
+              "RelativeDocumentMoniker": "WpfApp3\\Events\\CountDamageStartEvent.cs",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Events\\CountDamageStartEvent.cs",
+              "RelativeToolTip": "WpfApp3\\Events\\CountDamageStartEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T08:03:33.193Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "TeamDisplay.cs",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Data\\TeamDisplay.cs",
+              "RelativeDocumentMoniker": "WpfApp3\\Data\\TeamDisplay.cs",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Data\\TeamDisplay.cs",
+              "RelativeToolTip": "WpfApp3\\Data\\TeamDisplay.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAmwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T07:28:06.382Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Wuhua.Main",
+              "DocumentMoniker": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Wuhua.Main.csproj",
+              "RelativeDocumentMoniker": "WpfApp3\\Wuhua.Main.csproj",
+              "ToolTip": "C:\\Projects\\2025\\Wuhua\\src\\WpfApp3\\Wuhua.Main.csproj",
+              "RelativeToolTip": "WpfApp3\\Wuhua.Main.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-02-05T07:25:24.577Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

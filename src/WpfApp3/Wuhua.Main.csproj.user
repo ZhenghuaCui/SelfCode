@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\CountWeaponControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\DamageOutControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Dialog\DeepControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Dialog\AddWeapon.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Dialog\AddRoles.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\IncreInjuryControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\LearnControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\OtherFuncControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\OutputControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\RolesInfoControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\TeamControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\VulnerabilityControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Styles\GlobalResources.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\Metro\MetroBase.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\CountWeaponControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\DamageOutControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Dialog\DeepControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Dialog\AddWeapon.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Dialog\AddRoles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\IncreInjuryControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\LearnControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\OtherFuncControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\OutputControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\RolesInfoControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\TeamControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\VulnerabilityControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
