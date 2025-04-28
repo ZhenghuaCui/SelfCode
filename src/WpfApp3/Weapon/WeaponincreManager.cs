@@ -32,6 +32,9 @@ namespace Wuhua.Main.Weapon
                 case "熊猫竹剑":
                     weaponIncre = new Panda2Solder();
                     break;
+                case "熊猫竹炮":
+                    weaponIncre = new Panda2Guard();
+                    break;
                 default:
                     weaponIncre = new WeaponBase();
                     break;

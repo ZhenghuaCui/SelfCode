@@ -14,8 +14,7 @@ namespace Wuhua.Service
 		private readonly IWeaponInfoRepository _iWeaponRepository;
 		public WeaponInfoService(IWeaponInfoRepository repository)
 		{
-			base._iBaseRepository = repository;
-			_iWeaponRepository = repository;
+			base._iBaseRepository = _iWeaponRepository = repository;
 		}
 	}
 }

@@ -14,8 +14,8 @@ namespace Wuhua.Service
 		private readonly ILearnInfoRepository _iLearnInfoRepository;
 		public LearnInfoService(ILearnInfoRepository repository)
 		{
-			base._iBaseRepository = repository;
-			_iLearnInfoRepository = repository;
+			base._iBaseRepository = _iLearnInfoRepository = repository;
+
 		}
 	}
 }

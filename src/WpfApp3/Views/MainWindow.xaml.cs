@@ -73,7 +73,8 @@ namespace WpfApp3.Views
         }
 		private void ReadyCount_Click(object sender, RoutedEventArgs e)
 		{
-			var window = new OutputControl(_aggregator);
+            if (!CheckTeamControl()) return;
+            var window = new OutputControl(_aggregator);
 			window.Owner = this;
 			_aggregator.GetEvent<RoleSelectedEvent>()?.Publish(true);
 			var result = window.ShowDialog();
@@ -81,7 +82,6 @@ namespace WpfApp3.Views
 
 		private void EditRole_Click(object sender, RoutedEventArgs e)
 		{
-			if (!CheckTeamControl()) return;
 			var window = new AddRoles();
 			window.Owner = this;
 			_aggregator.GetEvent<ManageRolesEvent>()?.Publish(true);

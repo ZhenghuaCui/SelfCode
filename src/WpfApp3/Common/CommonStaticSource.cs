@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Reflection;
 using WpfApp3.Data;
 using Wuhua.Model;
 
@@ -91,9 +92,10 @@ namespace WpfApp3.Common
 					IncreClass = int.Parse(result[2]),
 					IncreType = int.Parse(result[3]),
 					IncreDetail = int.Parse(result[4]),
-					IncreNum = int.Parse(result[5]),
-				};
-				var newInfo = new ShowIncreInfo()
+                    IncreNum =  int.Parse(result[5])
+
+                };
+                var newInfo = new ShowIncreInfo()
 				{
 					Title = result[0],
 					IncreNum = result[5],
@@ -144,6 +146,27 @@ namespace WpfApp3.Common
 			}
 			return increListring;
 		}
-		#endregion
-	}
+        #endregion
+
+        public static T DeepCopy<T>(T obj)
+        {
+            if (obj == null)
+            {
+                return obj;
+            }
+            var type = obj.GetType();
+            if (obj is string || type.IsValueType)
+            {
+                return obj;
+            }
+
+            var result = Activator.CreateInstance(type);
+            var fields = type.GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Instance);
+            foreach (var field in fields)
+            {
+                field.SetValue(result, field.GetValue(obj));
+            }
+            return (T)result;
+        }
+    }
 }

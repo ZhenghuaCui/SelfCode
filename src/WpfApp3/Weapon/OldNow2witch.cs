@@ -30,7 +30,7 @@ namespace Wuhua.Main.Weapon
                     {
                         IncreClass = (int)IncreClass.DamageIncre,
                         IncreType = (int)IncreType.Percent,
-                        IncreDetail =(int)AtkType.Stunk,
+                        IncreDetail = (int)AtkType.Stunk,
                         IncreNum = 50
                     }
                 });

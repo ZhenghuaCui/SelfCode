@@ -9,23 +9,21 @@ using Wuhua.Model;
 
 namespace Wuhua.Main.Weapon
 {
-    //旧画扇
-    public class OldDraw2witch : WeaponBase
+    public class Panda2Guard : WeaponBase
     {
         public override List<ShowIncreInfo> GetIncre(SkillItem skillItem)
         {
             IncreInfos.Clear();
+            var incre1 = IncreDic["全增伤"];
+            IncreInfo incre1Copy = CommonStaticSource.DeepCopy<IncreInfo>(incre1);
+            incre1Copy.IncreNum = 15;
             IncreInfos.Add(new ShowIncreInfo()
             {
                 Title = "武器",
-                IncreNum = "20",
-                SelectedIncre = new IncreInfo()
-                {
-                    IncreClass = (int)IncreClass.DamageIncre,
-                    IncreType = (int)IncreType.Percent,
-                    IncreNum = 20
-                }
+                IncreNum = "30",
+                SelectedIncre = incre1Copy 
             });
+
             return IncreInfos;
         }
     }

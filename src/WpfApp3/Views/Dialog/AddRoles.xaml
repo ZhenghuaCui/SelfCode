@@ -6,6 +6,7 @@
 		xmlns:Metro="clr-namespace:AduSkin.Controls.Metro;assembly=AduSkin"
 		xmlns:AduAttach="clr-namespace:AduSkin.Controls.Attach;assembly=AduSkin"
 		xmlns:converter ="clr-namespace:WpfApp3.Common.Converter"
+		xmlns:Components ="clr-namespace:Wuhua.Main.Common.Components"
 		mc:Ignorable="d"
 		xmlns:prism="http://prismlibrary.com/"
 		prism:ViewModelLocator.AutoWireViewModel="True" Title="器者"
@@ -241,5 +242,7 @@
 			<Metro:AduFlatButton Grid.Column="1" Background="Transparent" Foreground="{StaticResource DefaultBrush}" Command="{Binding SaveRoleCommmand}" CommandParameter="{Binding ElementName=AddRolesWindow}"
 								 BorderThickness="1" BorderBrush="{StaticResource DefaultBrush}" Content="确定"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
 		</Grid>
+        <!--<Components:OkCancelPannel Grid.Row="1" OkCommand="{Binding SaveRoleExecute}" OkCommandParameter="{Binding ElementName=AddRolesWindow}"
+                                   CancelCommand="{Binding CancelCommand}" CancelCommandParameter="{Binding ElementName=AddRolesWindow}"/>-->
 	</Grid>
 </Window>

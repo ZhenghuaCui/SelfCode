@@ -12,6 +12,7 @@ using WpfApp3.Common;
 using WpfApp3.Data;
 using WpfApp3.Events;
 using Wuhua.IService;
+using Wuhua.Main.Common.Command;
 using Wuhua.Model;
 using Wuhua.NLog;
 
@@ -53,12 +54,12 @@ namespace WpfApp3.ViewModels
 		public Dictionary<DamageType, string> DamageTypeList { get; set; }
 		#endregion
 		#region commmand
-		public DelegateCommand<Window> SaveRoleCommmand { get; set; }
-		public DelegateCommand<Window> CancelCommand { get; set; }
+		public RelayCommand<Window> SaveRoleCommmand { get; set; }
+		public RelayCommand<Window> CancelCommand { get; set; }
 		public DelegateCommand<Window> AddIncreItemCommand { get; set; }
 		public DelegateCommand<ShowDeepInfo> DeleDeepCommand { get; set; }
         public DelegateCommand<Window> AddSkillItemCommand { get; set; }
-        
+
 
         #endregion
         #region properties
@@ -153,8 +154,8 @@ namespace WpfApp3.ViewModels
 			_learnInfoService = learnInfoService;
 			_aggregator = aggregator;
 
-			SaveRoleCommmand =  new DelegateCommand<Window>(SaveRoleExecute);
-			CancelCommand = new DelegateCommand<Window>(CancelExecute);
+			SaveRoleCommmand =  new RelayCommand<Window>(SaveRoleExecute);
+			CancelCommand = new RelayCommand<Window>(CancelExecute);
 			AddIncreItemCommand = new DelegateCommand<Window>(AddIncreItemExecute);
 			DeleDeepCommand = new DelegateCommand<ShowDeepInfo>(DeleteDeepExecute);
 			AddSkillItemCommand = new DelegateCommand<Window>(AddSkillItemExcute);

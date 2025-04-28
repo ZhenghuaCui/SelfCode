@@ -6,6 +6,11 @@
     <UseWPF>true</UseWPF>
     <ApplicationIcon>cat.ico</ApplicationIcon>
 	<ProductName>物化配队模拟器</ProductName>
+	<SelfContained>false</SelfContained>
+	<RuntimeIdentifier>win-x64</RuntimeIdentifier>
+	<SatelliteResourceLanguages>xxx</SatelliteResourceLanguages>
+	<Platforms>AnyCPU</Platforms>
+	  <PublishSingleFile>true</PublishSingleFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -35,6 +40,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Resource\Read me.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Resource\Version.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

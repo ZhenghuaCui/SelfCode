@@ -61,7 +61,7 @@ namespace WpfApp3.ViewModels
             InfoMsg = info;
         }
 
-        private void ReceivedResult(List<string> results)
+        private void ReceivedResult(IEnumerable<string> results)
 		{
             ResultList.AddRange(results);
         }

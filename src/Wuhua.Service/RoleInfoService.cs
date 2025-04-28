@@ -14,8 +14,7 @@ namespace Wuhua.Service
 		private readonly IRoleInfoRepository _iRoleInfoRepository;
 		public RoleInfoService(IRoleInfoRepository repository)
 		{
-			base._iBaseRepository = repository;
-			_iRoleInfoRepository = repository;
+			base._iBaseRepository = _iRoleInfoRepository= repository;
 		}
 	}
 }

@@ -67,8 +67,10 @@ namespace WpfApp3.ViewModels
 			switch (rolesVm.CurrentRole.SelectedRole.RoleName)
 			{
 				case "莫高窟":
-				default:
-					roleItem = new MogaoGrottoes(); break;
+                    roleItem = new MogaoGrottoes(); break;
+                default:
+					roleItem = new BaseCounter();break;
+
 			}
 			roleItem.Register(rolesVm,MonsterDefList.ToList(), ResultList, WeaponEntryList);
 			var resultList = roleItem.GetOutPut();

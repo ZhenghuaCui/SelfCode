@@ -16,15 +16,18 @@ namespace Wuhua.Main.Weapon
         {
             IncreInfos.Clear();
             var incre1 = IncreDic["贯穿率"];
-            incre1.IncreNum = 15;
+            IncreInfo incre1Copy = CommonStaticSource.DeepCopy<IncreInfo>(incre1);
+            incre1Copy.IncreNum = 15;
             IncreInfos.Add(new ShowIncreInfo()
                 {
                     Title = "武器",
                     IncreNum = "15",
-                    SelectedIncre = incre1
+                    SelectedIncre = incre1Copy
             });
             var incre2 = IncreDic["暴击率"];
-            incre2.IncreNum = 10;
+            IncreInfo incre2Copy = CommonStaticSource.DeepCopy<IncreInfo>(incre2);
+
+            incre2Copy.IncreNum = 10;
             IncreInfos.Add(new ShowIncreInfo()
             {
                 Title = "武器",
@@ -32,7 +35,8 @@ namespace Wuhua.Main.Weapon
                 SelectedIncre = incre2
             });
             var incre3 = IncreDic["暴击伤害"];
-            incre2.IncreNum = 15;
+            IncreInfo incre3Copy = CommonStaticSource.DeepCopy<IncreInfo>(incre3);
+            incre3Copy.IncreNum  =15;
             IncreInfos.Add(new ShowIncreInfo()
             {
                 Title = "武器",

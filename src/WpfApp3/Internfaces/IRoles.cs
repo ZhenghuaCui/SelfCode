@@ -9,7 +9,7 @@ namespace WpfApp3.Internfaces
 {
     public interface IRoles
 	{
-		List<string> GetOutPut();
+		IEnumerable<string> GetOutPut();
 		void Register(RolesInfoControlViewModel vm,List<Monster>monsters, ObservableCollection<string> ResultList,List<IncreInfo> increInfoLights);
 	}
 }

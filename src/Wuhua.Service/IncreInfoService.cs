@@ -14,8 +14,7 @@ namespace Wuhua.Service
 		private readonly IIncreInfoRepository _iIncreInfoRepository;
 		public IncreInfoService(IIncreInfoRepository repository)
 		{
-			base._iBaseRepository = repository;
-			_iIncreInfoRepository = repository;
+            base._iBaseRepository = _iIncreInfoRepository = repository;
 		}
 	}
 }

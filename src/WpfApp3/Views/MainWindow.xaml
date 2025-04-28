@@ -9,7 +9,7 @@
 		xmlns:prism="http://prismlibrary.com/"
 		prism:ViewModelLocator.AutoWireViewModel="False"
         mc:Ignorable="d" Closed="On_Closed"
-        Title="物华配队伤害计算器" Height="370" Width="800" WindowStartupLocation="CenterScreen">
+        Title="物华配队伤害计算器--b站 花开又一树" Height="370" Width="800" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <ResourceDictionary>
             <Style TargetType="Control">

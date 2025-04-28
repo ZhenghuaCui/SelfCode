@@ -1,12 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup />
+  <PropertyGroup>
+    <_LastSelectedProfileId>C:\Projects\2025\Wuhua\src\WpfApp3\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
   <ItemGroup>
     <ApplicationDefinition Update="App.xaml">
       <SubType>Designer</SubType>
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Common\Components\OkCancelPannel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\CountWeaponControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -45,6 +50,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Common\Components\OkCancelPannel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Styles\GlobalResources.xaml">
       <SubType>Designer</SubType>
     </Page>

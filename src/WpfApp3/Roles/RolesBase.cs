@@ -20,7 +20,7 @@ namespace WpfApp3.Roles
 		// 词条容器
 		public List<IncreInfo> WeaponEntryList;
 
-        public virtual List<string> GetOutPut()
+        public virtual IEnumerable<string> GetOutPut()
 		{
 			return ResultList.ToList();
 		}

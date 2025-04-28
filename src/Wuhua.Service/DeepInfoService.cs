@@ -14,8 +14,7 @@ namespace Wuhua.Service
 		private readonly IDeepInfoRepository _iDeepInfoRepository;
 		public DeepInfoService(IDeepInfoRepository repository)
 		{
-			base._iBaseRepository = repository;
-			_iDeepInfoRepository = repository;
+			base._iBaseRepository = _iDeepInfoRepository = repository;
 		}
 	}
 }

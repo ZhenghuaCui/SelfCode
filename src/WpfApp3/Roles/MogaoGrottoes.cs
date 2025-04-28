@@ -32,7 +32,7 @@ namespace WpfApp3.Roles
         List<ShowIncreInfo> wTargetTypeVulList = new List<ShowIncreInfo>();
         List<List<Tuple<List<string>, int>>> compairResults = new List<List<Tuple<List<string>, int>>>();
         private WeaponIncreManager weaponIncreManager;
-        public override List<string> GetOutPut()
+        public override IEnumerable<string> GetOutPut()
         {
             try
             {
