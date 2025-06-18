@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace WpfApp3.Common
+﻿namespace WpfApp3.Common
 {
     public enum DamageType
 	{
@@ -89,11 +87,13 @@ namespace WpfApp3.Common
 	public enum DefArea
 	{
 		// 防御穿透
-		CountDownDef,
+		CrossDef,
 		// 贯穿率
 		ThroughOut,
 		// 贯穿强度
-		ThroughOutNum
+		ThroughOutNum,
+
+		DefDown
 	}
 	public enum RoleTypeEnum
 	{

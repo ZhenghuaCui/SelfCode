@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WpfApp3.Common;
+﻿using System.Collections.Generic;
 using WpfApp3.Data;
-using Wuhua.Model;
 
 namespace Wuhua.Main.Weapon
 {
@@ -15,17 +9,10 @@ namespace Wuhua.Main.Weapon
         public override List<ShowIncreInfo> GetIncre(SkillItem skillItem)
         {
             IncreInfos.Clear();
-            IncreInfos.Add(new ShowIncreInfo()
+            for (int i = 0; i < 1; i++)
             {
-                Title = "武器",
-                IncreNum = "20",
-                SelectedIncre = new IncreInfo()
-                {
-                    IncreClass = (int)IncreClass.DamageIncre,
-                    IncreType = (int)IncreType.Percent,
-                    IncreNum = 20
-                }
-            });
+                CountIncreInfo(IncreDic["全增伤"], 20);
+            }
             return IncreInfos;
         }
     }

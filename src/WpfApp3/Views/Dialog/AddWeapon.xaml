@@ -6,6 +6,7 @@
 		xmlns:Metro="clr-namespace:AduSkin.Controls.Metro;assembly=AduSkin"
 		xmlns:AduAttach="clr-namespace:AduSkin.Controls.Attach;assembly=AduSkin"
         xmlns:local="clr-namespace:WpfApp3.Views"
+        xmlns:extensions ="clr-namespace:Wuhua.Main.Common.Extensions"
         mc:Ignorable="d"
 		xmlns:prism="http://prismlibrary.com/"
 		prism:ViewModelLocator.AutoWireViewModel="True"
@@ -68,7 +69,7 @@
 									<Metro:MetroTextBox  Grid.Row="2" Grid.Column="1" Text="{Binding BaseAtk}"  Margin="12 3"  Width="120" />
 									
 								</Grid>
-								<ListBox  Grid.Row="3" Grid.Column="1" Width="190" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Left" Height="220" ItemsSource="{Binding ShowWeaponsList}"
+                                <ListBox  Grid.Row="3" Grid.Column="1" Width="190" extensions:ListBoxWheelBehavior.ForwardWheelEvent="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Left" Height="220" ItemsSource="{Binding ShowWeaponsList}"
 										   Style="{StaticResource StackPanelVerticalListBox}">
 									<ListBox.ItemTemplate>
 										<DataTemplate>

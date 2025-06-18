@@ -1,7 +1,6 @@
 ﻿using Prism.Events;
 using Prism.Ioc;
 using Prism.Mvvm;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -9,7 +8,6 @@ using WpfApp3.Data;
 using WpfApp3.Events;
 using WpfApp3.Internfaces;
 using WpfApp3.Roles;
-using Wuhua.Main.Data;
 using Wuhua.Main.Events;
 using Wuhua.Model;
 

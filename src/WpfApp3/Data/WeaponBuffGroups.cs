@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using WpfApp3.Data;
 
 namespace Wuhua.Main.Data
 {
-     public class WeaponBuffGroups
+    public class WeaponBuffGroups
     {
         public List<ShowIncreInfo> AtkIncres { get; } = new();
         public List<ShowIncreInfo> DefIncres { get; } = new();

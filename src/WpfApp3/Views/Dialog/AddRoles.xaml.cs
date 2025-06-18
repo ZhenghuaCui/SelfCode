@@ -14,7 +14,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfApp3.Common;
 using WpfApp3.ViewModels;
+using Wuhua.NLog;
 
 namespace WpfApp3.Views
 {
@@ -23,9 +25,13 @@ namespace WpfApp3.Views
 	/// </summary>
 	public partial class AddRoles : Window
 	{
-		public AddRoles()
+        public AddRoles()
 		{
+
 			InitializeComponent();
-		}
-	}
+
+        }
+
+
+    }
 }

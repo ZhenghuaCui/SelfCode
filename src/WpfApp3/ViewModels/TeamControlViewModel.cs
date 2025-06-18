@@ -103,7 +103,7 @@ namespace WpfApp3.ViewModels
 			}
 		}
 
-		private async void RolesAdded(RoleInfo role)
+		private  void RolesAdded(RoleInfo role)
 		{
 			foreach(var item in TeamList)
 			{
@@ -115,7 +115,7 @@ namespace WpfApp3.ViewModels
 			InitDisplay();
 		}
 
-		private async void InitDisplay()
+		private  void InitDisplay()
 		{
 			TeamList.Clear();
 			for (int i = 0; i < 6; i++)

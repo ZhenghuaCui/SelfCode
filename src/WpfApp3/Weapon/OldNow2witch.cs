@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using WpfApp3.Common;
 using WpfApp3.Data;
-using Wuhua.Model;
 
 namespace Wuhua.Main.Weapon
 {
@@ -14,28 +9,14 @@ namespace Wuhua.Main.Weapon
         // 星霞
         public override List<ShowIncreInfo> GetIncre(SkillItem skillItem)
         {
-            SkillList.Add(skillItem);
-            if (IsGetAll)
-            {
-                return IncreInfos;
-            }
             IncreInfos.Clear();
-            if (SkillList.Any(i => i.AtkType == AtkType.Profession))
+            for (int i = 0; i < flag; i++)
             {
-                IncreInfos.Add(new ShowIncreInfo()
-                {
-                    Title = "武器",
-                    IncreNum = "50",
-                    SelectedIncre = new IncreInfo()
-                    {
-                        IncreClass = (int)IncreClass.DamageIncre,
-                        IncreType = (int)IncreType.Percent,
-                        IncreDetail = (int)AtkType.Stunk,
-                        IncreNum = 50
-                    }
-                });
-                IsGetAll = true;
+                CountIncreInfo(IncreDic["绝技增伤"], 25);
             }
+            if (skillItem.AtkType.Equals(AtkType.Frequent) && flag < 2)
+                flag++;
+
             return IncreInfos;
         }
     }

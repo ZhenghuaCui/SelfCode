@@ -123,13 +123,29 @@ namespace WpfApp3.Common
 			{
 				if (string.IsNullOrEmpty(item)) break;
 				var result = item.Split(',');
-				resultList.Add(new SkillItem()
+				if (result.Length > 4) {
+                    resultList.Add(new SkillItem()
+                    {
+                        AtkType = (AtkType)Enum.Parse(typeof(AtkType), result[0], true),
+                        DamageType = (DamageType)Enum.Parse(typeof(DamageType), result[1], true),
+                        DamageTimes = result[2],
+                        SkillNum = result[3],
+                        BindLastDamage = Convert.ToBoolean(result[4]),
+                        NotCritable = Convert.ToBoolean(result[5]),
+                        Targets = result[6],
+                    });
+                }
+				else
 				{
-					AtkType = (AtkType)Enum.Parse(typeof(AtkType), result[0], true),
-					DamageType = (DamageType)Enum.Parse(typeof(DamageType), result[1], true),
-					DamageTimes = result[2],
-					SkillNum = result[3]
-				});
+                    resultList.Add(new SkillItem()
+                    {
+                        AtkType = (AtkType)Enum.Parse(typeof(AtkType), result[0], true),
+                        DamageType = (DamageType)Enum.Parse(typeof(DamageType), result[1], true),
+                        DamageTimes = result[2],
+                        SkillNum = result[3],
+                    });
+                }
+
 			}
 			return resultList;
 		}
@@ -141,7 +157,7 @@ namespace WpfApp3.Common
 			{
 				if (string.IsNullOrEmpty(item.SkillNum)) continue;
 				var str = "";
-				str = $"{item.AtkType},{item.DamageType},{item.DamageTimes},{item.SkillNum}&";
+				str = $"{item.AtkType},{item.DamageType},{item.DamageTimes},{item.SkillNum},{item.BindLastDamage},{item.NotCritable},{item.Targets}&";
 				increListring += str;
 			}
 			return increListring;

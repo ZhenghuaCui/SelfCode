@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:WpfApp3.Views"
 		xmlns:Metro="clr-namespace:AduSkin.Controls.Metro;assembly=AduSkin"
 		xmlns:AduAttach="clr-namespace:AduSkin.Controls.Attach;assembly=AduSkin"
+        xmlns:extensions ="clr-namespace:Wuhua.Main.Common.Extensions"
 		xmlns:prism="http://prismlibrary.com/"
 		prism:ViewModelLocator.AutoWireViewModel="True"
 		AllowsTransparency="True"  WindowStyle="None" BorderThickness="0"
@@ -49,7 +50,7 @@
 									<TextBlock Grid.Column="0" Foreground="{StaticResource DefaultBrush}" Text="效果" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 									<TextBlock Grid.Column="1" Foreground="{StaticResource DefaultBrush}" Text="数值" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 								</Grid>
-								<ListBox x:Name="IncreList" ItemsSource="{Binding LearnList,Mode=TwoWay}"  BorderThickness="0" Width="240"  HorizontalContentAlignment="Left" HorizontalAlignment="Left"
+                                <ListBox x:Name="IncreList" extensions:ListBoxWheelBehavior.ForwardWheelEvent="True" ItemsSource="{Binding LearnList,Mode=TwoWay}"  BorderThickness="0" Width="240"  HorizontalContentAlignment="Left" HorizontalAlignment="Left"
 											 Style="{StaticResource StackPanelVerticalListBox}" SelectedIndex="0"
 											  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
 											  >
@@ -86,7 +87,7 @@
 									<TextBlock Grid.Column="0" Foreground="{StaticResource DefaultBrush}" Text="效果" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 									<TextBlock Grid.Column="1" Foreground="{StaticResource DefaultBrush}" Text="数值" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 								</Grid>-->
-								<ListBox x:Name="CommonList" ItemsSource="{Binding CommonList,Mode=TwoWay}"  BorderThickness="0" Width="240"  HorizontalContentAlignment="Left" HorizontalAlignment="Left"
+                                <ListBox x:Name="CommonList" extensions:ListBoxWheelBehavior.ForwardWheelEvent="True" ItemsSource="{Binding CommonList,Mode=TwoWay}"  BorderThickness="0" Width="240"  HorizontalContentAlignment="Left" HorizontalAlignment="Left"
 											 Style="{StaticResource StackPanelVerticalListBox}" SelectedIndex="0"
 											  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
 											  >

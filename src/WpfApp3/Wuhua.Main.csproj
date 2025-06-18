@@ -4,13 +4,15 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows7.0</TargetFramework>
     <UseWPF>true</UseWPF>
+	<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+	<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
     <ApplicationIcon>cat.ico</ApplicationIcon>
-	<ProductName>物化配队模拟器</ProductName>
-	<SelfContained>false</SelfContained>
-	<RuntimeIdentifier>win-x64</RuntimeIdentifier>
+	<ProductName>Counter</ProductName>
+	<SelfContained>true</SelfContained>
+	<RuntimeIdentifier>win-x86</RuntimeIdentifier>
 	<SatelliteResourceLanguages>xxx</SatelliteResourceLanguages>
 	<Platforms>AnyCPU</Platforms>
-	  <PublishSingleFile>true</PublishSingleFile>
+	<PublishSingleFile>true</PublishSingleFile>
   </PropertyGroup>
 
   <ItemGroup>

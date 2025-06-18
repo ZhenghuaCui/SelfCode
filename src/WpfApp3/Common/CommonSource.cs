@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
-using Microsoft.IdentityModel.Logging;
-using WpfApp3.Data;
 using Wuhua.IService;
 using Wuhua.Model;
 using Wuhua.NLog;

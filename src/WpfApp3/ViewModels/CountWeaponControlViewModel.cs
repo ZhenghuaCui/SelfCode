@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Linq;
-using System.Windows;
-using Prism.Commands;
 using Prism.Events;
 using Prism.Ioc;
 using Prism.Mvvm;
 using WpfApp3.Common;
 using Wuhua.Main.Data;
-using Wuhua.Main.Events;
 
 namespace Wuhua.Main.ViewModels
 {

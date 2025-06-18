@@ -5,7 +5,6 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
 using SqlSugar;
 using WpfApp3.Common;
@@ -13,12 +12,10 @@ using WpfApp3.Data;
 using Wuhua.Main.Common;
 using Wuhua.Main.Common.Extensions;
 using Wuhua.Main.Data;
-using Wuhua.Main.Internfaces;
 using Wuhua.Main.Roles.Strategy;
 using Wuhua.Main.Weapon;
 using Wuhua.Model;
 using Wuhua.NLog;
-using static Unity.Storage.RegistrationSet;
 
 namespace WpfApp3.Roles
 {
@@ -90,11 +87,12 @@ namespace WpfApp3.Roles
             };
             weaponIncreManager = new WeaponIncreManager();
             LoggerHelper.Logger.Info($"计算开始");
+            List<Tuple<List<string>, int>> tuples = new List<Tuple<List<string>, int>>();
             try
             {
                 // 局内攻击力
                 var Atk = GetGameAtk(entryList);
-                List<Tuple<List<string>, int>> tuples = new List<Tuple<List<string>, int>>();
+               
 
 
                 //// exist bug, make list need lock
@@ -120,30 +118,36 @@ namespace WpfApp3.Roles
                     resultStrList.Add(PrintWeaponInfo(entryList));
                     LoggerHelper.Logger.Info($"按Monster--开始");
                     weaponIncreManager.SetWeaponInstance(_rolesVm.CurrentRole.SelectedWeapon);
+                    int lastDamage = 0;
                     foreach (var item in _skillList)
                     {
-                        LoggerHelper.Logger.Info($"按Skill--开始");
-                        // 处理武器加成
-                        var weaponIncres = weaponIncreManager.GetWeapoIncre(item);
-                        SplitWeaponIncre(weaponIncres);
-                        // 计算组合最优解
-                        if (entryList != null)
+                        for (int target = 0; target < int.Parse(item.Targets); target++)
                         {
-                            SplitWeaponIncre(TranseferIncreInfo(entryList));
+
+                            LoggerHelper.Logger.Info($"按Skill--开始");
+                            // 处理武器加成
+                            var weaponIncres = weaponIncreManager.GetWeapoIncre(item);
+                            SplitWeaponIncre(weaponIncres);
+                            // 计算组合最优解
+                            if (entryList != null)
+                            {
+                                SplitWeaponIncre(TranseferIncreInfo(entryList));
+                            }
+                            // 真实伤害
+                            if (item.DamageType == DamageType.Authentic)
+                            {
+                                CountAuthentic(resultStrList, Atk.gameAtk, monster, item, ref allDamage, target);
+                                continue;
+                            }
+                            var defDown = _damageStrategy.CalculateDefenceReduction(monster);
+                            var criticalBonus = item.NotCritable?1:_damageStrategy.CalculateCriticalBonus(item);
+                            var skillInjury = _damageStrategy.CalculateSkill(item);
+                            var injury = _damageStrategy.CalculateInjuryMultiplier(item);
+                            Debug.WriteLine($"defDown:{defDown},criticalBonus:{criticalBonus},skillInjury{skillInjury},injury:{injury}");
+                            // 最终计算
+                            var baseValue = item.BindLastDamage ? lastDamage:Atk.gameAtk;
+                            lastDamage =  CountSingleDamage(resultStrList, item, baseValue, defDown, monster, criticalBonus * skillInjury * injury, target, ref allDamage);
                         }
-                        // 真实伤害
-                        if (item.DamageType == DamageType.Authentic)
-                        {
-                            CountAuthentic(resultStrList, Atk.gameAtk, monster, item, ref allDamage);
-                            continue;
-                        }
-                        var defDown = _damageStrategy.CalculateDefenceReduction(monster);
-                        var criticalBonus = _damageStrategy.CalculateCriticalBonus(item);
-                        var skillInjury = _damageStrategy.CalculateSkill(item);
-                        var injury = _damageStrategy.CalculateInjuryMultiplier(item);
-                        Debug.WriteLine($"defDown:{defDown},criticalBonus:{criticalBonus},skillInjury{skillInjury},injury:{injury}");
-                        // 最终计算
-                        CountSingleDamage(resultStrList, item, Atk.gameAtk, defDown, monster, criticalBonus * skillInjury * injury, ref allDamage);
                     }
                     var finalResult = $"总计:{allDamage}";
                     LoggerHelper.Logger.Info(finalResult);
@@ -154,8 +158,8 @@ namespace WpfApp3.Roles
             }
             catch (Exception ex)
             {
-                LoggerHelper.Logger.Error(ex.Message);
-                return null;
+                LoggerHelper.Logger.Error(ex.Message,ex);
+                return tuples;
             }
         }
 
@@ -223,9 +227,9 @@ namespace WpfApp3.Roles
             }
 
         }
-        private string ComposeResult(Monster monster, SkillItem skill, int damage)
+        private string ComposeResult(Monster monster, SkillItem skill, int damage,int target)
         {
-            string str = $"对{monster.Level}级-{monster.Def}防敌人造成[{CommonStaticSource.AtkTypeDic[skill.AtkType]}]" +
+            string str = $"对{monster.Level}级-{monster.Def}防-敌人{target}造成[{CommonStaticSource.AtkTypeDic[skill.AtkType]}]" +
                 $"[{CommonStaticSource.DamageTypeDic[skill.DamageType]}] {skill.DamageTimes}次共：{damage}点";
             return str;
 
@@ -285,16 +289,16 @@ namespace WpfApp3.Roles
             }
             return info;
         }
-        private void CountAuthentic(List<string> resultStrList, decimal gameAtk, Monster monster, SkillItem item, ref int allDamage)
+        private void CountAuthentic(List<string> resultStrList, decimal gameAtk, Monster monster, SkillItem item, ref int allDamage,int target)
         {
             decimal result = (int)(gameAtk * int.Parse(item.SkillNum) / (decimal)100 * int.Parse(item.DamageTimes));
             allDamage += (int)result;
             _weaponBuffGroups.ClearAll();
-            var singleResult = ComposeResult(monster, item, (int)result);
+            var singleResult = ComposeResult(monster, item, (int)result,target);
             LoggerHelper.Logger.Info($"本次结果：{singleResult}");
             resultStrList.Add(singleResult);
         }
-        private void CountSingleDamage(List<string> resultStrList, SkillItem item, decimal gameAtk, decimal defDown, Monster monster, Decimal criticalBonus, ref int allDamage)
+        private int CountSingleDamage(List<string> resultStrList, SkillItem item, decimal gameAtk, decimal defDown, Monster monster, Decimal criticalBonus,int target, ref int allDamage)
         {
             decimal result = 0;
             // 单次伤害
@@ -322,11 +326,12 @@ namespace WpfApp3.Roles
             result *= defDown;
             Interlocked.Add(ref allDamage, (int)result);
             _weaponBuffGroups.ClearAll();
-            var singleResult = ComposeResult(monster, item, (int)result);
+            //单次结果string
+            var singleResult = ComposeResult(monster, item, (int)result,target);
             LoggerHelper.Logger.Info($"本次结果：{singleResult}");
-            if (WeaponEntryList.Count() > 0) return;
+            if (WeaponEntryList.Count() > 0) return (int)result;
             resultStrList.Add(singleResult);
-
+            return (int)result;
         }
         #endregion
 

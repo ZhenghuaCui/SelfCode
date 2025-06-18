@@ -148,7 +148,7 @@ namespace WpfApp3.ViewModels
 			}
 		}
 
-		private async void Init()
+		private void Init()
 		{
 			//排除攻击加成区及易伤区选项
 			IncreProList.AddRange(_commonSource.IncreInfos.Where(i => i.IncreClass != (int)IncreClass.AtkIncre

@@ -59,6 +59,7 @@ namespace WpfApp3.ViewModels
 		public DelegateCommand<Window> AddIncreItemCommand { get; set; }
 		public DelegateCommand<ShowDeepInfo> DeleDeepCommand { get; set; }
         public DelegateCommand<Window> AddSkillItemCommand { get; set; }
+        public DelegateCommand<Window> AddRoleItemCommand { get; set; }
 
 
         #endregion
@@ -122,6 +123,7 @@ namespace WpfApp3.ViewModels
 				LoadRole();
 			}
 		}
+        // true 增加 false 编辑角色
 		private Visibility isEditShow;
 		public Visibility IsEditShow
 		{
@@ -145,7 +147,6 @@ namespace WpfApp3.ViewModels
 		#endregion
 		public AddRolesViewModel(IContainerProvider containerProvider, IEventAggregator aggregator,IRoleInfoService roleInfoService,IDeepInfoService deepInfoService,ILearnInfoService learnInfoService)
 		{
-			
 			_commonSource = containerProvider.Resolve<CommonSource>("CommonSource");
 			aggregator.GetEvent<ManageRolesEvent>().Subscribe(ManageRolesExecute);
 			IncreProList.AddRange(_commonSource.IncreInfos);
@@ -157,7 +158,8 @@ namespace WpfApp3.ViewModels
 			SaveRoleCommmand =  new RelayCommand<Window>(SaveRoleExecute);
 			CancelCommand = new RelayCommand<Window>(CancelExecute);
 			AddIncreItemCommand = new DelegateCommand<Window>(AddIncreItemExecute);
-			DeleDeepCommand = new DelegateCommand<ShowDeepInfo>(DeleteDeepExecute);
+            AddRoleItemCommand = new DelegateCommand<Window>(AddRoleItemExcute);
+            DeleDeepCommand = new DelegateCommand<ShowDeepInfo>(DeleteDeepExecute);
 			AddSkillItemCommand = new DelegateCommand<Window>(AddSkillItemExcute);
 
             Init();
@@ -171,7 +173,7 @@ namespace WpfApp3.ViewModels
         private async void DeleteDeepExecute(ShowDeepInfo showDeepInfo)
 		{
 			ShowDeepList.Remove(showDeepInfo);
-			var result = _deepInfoService.DeleteAsync(showDeepInfo.DeepInfo.Id);
+			var result = await  _deepInfoService.DeleteAsync(showDeepInfo.DeepInfo.Id);
 			
 		}
 
@@ -179,8 +181,12 @@ namespace WpfApp3.ViewModels
 		{
 			GameIncreList.Add(new ShowIncreInfo() { IncreInfoList = gameIncreList });
 		}
-
-		private void ManageRolesExecute(bool isEdit)
+        
+        private void AddRoleItemExcute(Window obj)
+        {
+            RoleIncreList.Add(new ShowIncreInfo() { Title = roleProDic[RoleProEnm.Life], IncreInfoList = baseIncreList });
+        }
+        private void ManageRolesExecute(bool isEdit)
 		{
 			if (isEdit)
 			{
@@ -320,7 +326,7 @@ namespace WpfApp3.ViewModels
             }
 
         }
-        private async void Init()
+        private void Init()
         {
             OccupationList = CommonStaticSource.OccupationDic;
             RoleTypeList = CommonStaticSource.RoleTypeDic;
@@ -360,7 +366,7 @@ namespace WpfApp3.ViewModels
             }
 
         }
-        private async void InitNewRole()
+        private  void InitNewRole()
         {
             try
             {

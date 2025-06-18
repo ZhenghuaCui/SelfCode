@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows;
 using Prism.Ioc;
 using WpfApp3;
@@ -19,6 +15,8 @@ namespace Wuhua.Main.Weapon
         public List<SkillItem> SkillList = new List<SkillItem>();
         public List<ShowIncreInfo> IncreInfos = new List<ShowIncreInfo>();
         public Dictionary<string, IncreInfo> IncreDic;
+        public int flag = 0;
+
         public WeaponBase(IContainerProvider containerProvider)
         {
             var _commonSource = containerProvider.Resolve<CommonSource>("CommonSource");
@@ -40,6 +38,18 @@ namespace Wuhua.Main.Weapon
 
         public virtual List<ShowIncreInfo> GetIncre(SkillItem skillItem) {
             return new List<ShowIncreInfo>();
+        }
+        public void CountIncreInfo(IncreInfo incre, int value)
+        {
+            IncreInfo incre1Copy = CommonStaticSource.DeepCopy<IncreInfo>(incre);
+            incre1Copy.IncreNum = value;
+            IncreInfos.Add(new ShowIncreInfo()
+            {
+                Title = "武器",
+                IncreNum = value.ToString(),
+                SelectedIncre = incre1Copy
+            });
+
         }
     }
 }

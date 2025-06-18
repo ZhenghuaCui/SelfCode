@@ -2,17 +2,14 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Threading;
 using System.Windows;
 using SqlSugar;
 using WpfApp3.Common;
 using WpfApp3.Data;
 using Wuhua.Main.Common;
-using Wuhua.Main.Internfaces;
 using Wuhua.Main.Weapon;
 using Wuhua.Model;
 using Wuhua.NLog;
-using static Unity.Storage.RegistrationSet;
 
 namespace WpfApp3.Roles
 {
@@ -413,20 +410,29 @@ namespace WpfApp3.Roles
         // 计算增伤*易伤乘区
         private decimal CountInjureVulIncre(SkillItem item, List<ShowIncreInfo> damageTypeInjuryList, List<ShowIncreInfo> damageTypeVoluneraList)
         {
-            DamageType dameType = item.AtkType != AtkType.Contential ? item.DamageType : DamageType.Magic;
+            var damageType = TransContentialDamageType(item);
             // 增伤区：全增伤*攻击类型增伤*伤害类型增伤*目标类型增伤
             decimal injury = ((100 + GetListBonus(_rolesVm.InjuryVm.AllHurtList.ToList()) + GetListBonus(wAllHurtList)) / (decimal)100)
                 * ((100 + GetCompairedBonus(_rolesVm.InjuryVm.AtkTypeList.ToList(), (int)item.AtkType) + GetCompairedBonus(wAtkTypeList, (int)item.AtkType)) / (decimal)100)
-                * ((100 + GetCompairedBonus(damageTypeInjuryList, (int)item.DamageType) + GetCompairedBonus(wDamageTypeList, (int)item.DamageType)) / (decimal)100);
+                * ((100 + GetCompairedBonus(damageTypeInjuryList, (int)damageType) + GetCompairedBonus(wDamageTypeList, (int)damageType)) / (decimal)100);
             LoggerHelper.Logger.Info($"增伤区系数：{injury}");
-
+  
             // 易伤区：全易伤*攻击类型易伤*伤害类型易伤*目标类型易伤
             decimal vulnerab = (100 + GetListBonus(_rolesVm.VulnerabVm.AllHurtList.ToList()) + GetListBonus(wAllVulList)) / (decimal)100
                 * (100 + GetCompairedBonus(_rolesVm.VulnerabVm.AtkTypeList.ToList(), (int)item.AtkType) + GetCompairedBonus(wAtkTypeVulList, (int)item.AtkType)) / (decimal)100
-                * (100 + GetCompairedBonus(damageTypeVoluneraList, (int)item.DamageType) + GetCompairedBonus(wDamageTypeVulList, (int)item.DamageType)) / (decimal)100;
+                * (100 + GetCompairedBonus(damageTypeVoluneraList, (int)damageType) + GetCompairedBonus(wDamageTypeVulList, (int)damageType)) / (decimal)100;
             LoggerHelper.Logger.Info($"易伤区系数：{vulnerab}");
 
             return injury * vulnerab;
+        }
+        private static DamageType TransContentialDamageType(SkillItem item)
+        {
+            var damageType = item.DamageType;
+            if (item.DamageType == DamageType.Burn || item.DamageType == DamageType.Melt)
+                damageType = DamageType.Magic;
+            else if (item.DamageType == DamageType.LostBlood)
+                damageType = DamageType.Physical;
+            return damageType;
         }
         #endregion
     }

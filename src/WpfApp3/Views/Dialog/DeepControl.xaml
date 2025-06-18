@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp3.Views"
+        xmlns:extensions ="clr-namespace:Wuhua.Main.Common.Extensions"
         mc:Ignorable="d"
 		xmlns:Metro="clr-namespace:AduSkin.Controls.Metro;assembly=AduSkin"
 		xmlns:AduAttach="clr-namespace:AduSkin.Controls.Attach;assembly=AduSkin"
@@ -64,7 +65,7 @@
 									</Metro:AduComboBox>
 								</Grid>
 								<StackPanel Grid.Row="1">
-									<ListBox ItemsSource="{Binding CoreIncreList,UpdateSourceTrigger=PropertyChanged}" BorderThickness="1" Width="230" Height="320" HorizontalContentAlignment="Left" HorizontalAlignment="Left"
+                                    <ListBox  extensions:ListBoxWheelBehavior.ForwardWheelEvent="True" ItemsSource="{Binding CoreIncreList,UpdateSourceTrigger=PropertyChanged}" BorderThickness="1" Width="230" Height="320" HorizontalContentAlignment="Left" HorizontalAlignment="Left"
 											 Style="{StaticResource StackPanelVerticalListBox}" SelectedIndex="0"
 											  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
 											  >
@@ -103,7 +104,7 @@
 									<TextBlock Grid.Column="0" Foreground="{StaticResource DefaultBrush}" Text="效果" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 									<TextBlock Grid.Column="1" Foreground="{StaticResource DefaultBrush}" Text="数值" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 								</Grid>
-								<ListBox x:Name="IncreList" ItemsSource="{Binding RoleIncreList,Mode=TwoWay}"  BorderThickness="0" Width="240"  HorizontalContentAlignment="Left" HorizontalAlignment="Left"
+                                <ListBox x:Name="IncreList" extensions:ListBoxWheelBehavior.ForwardWheelEvent="True" ItemsSource="{Binding RoleIncreList,Mode=TwoWay}"  BorderThickness="0" Width="240"  HorizontalContentAlignment="Left" HorizontalAlignment="Left"
 											 Style="{StaticResource StackPanelVerticalListBox}" SelectedIndex="0"
 											  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
 											  >

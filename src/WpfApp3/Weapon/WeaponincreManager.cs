@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using WpfApp3.Data;
 using Wuhua.Main.Internfaces;
-using Wuhua.Model;
 
 namespace Wuhua.Main.Weapon
 {
@@ -34,6 +29,18 @@ namespace Wuhua.Main.Weapon
                     break;
                 case "熊猫竹炮":
                     weaponIncre = new Panda2Guard();
+                    break;
+                case "流云鸣沙乐":
+                    weaponIncre = new Cloud2witch();
+                    break;
+                case "流云鸣沙刃":
+                    weaponIncre = new Cloud2Solder();
+                    break;
+                case "流云鸣沙弩":
+                    weaponIncre = new Cloud2Shooter();
+                    break;
+                case "流云鸣沙炮":
+                    weaponIncre = new Cloud2Guard();
                     break;
                 default:
                     weaponIncre = new WeaponBase();

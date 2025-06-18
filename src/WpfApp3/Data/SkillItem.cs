@@ -23,7 +23,26 @@ namespace WpfApp3.Data
                 SetProperty(ref damageType, value);
             }
         }
-        private string damageTimes = "0";
+        private string targets = "1";
+        public string Targets
+        {
+            get { return targets; }
+            set
+            {
+                int number;
+                if (int.TryParse(value, out number))
+                {
+                    SetProperty(ref targets, number.ToString());
+                }
+                else
+                {
+                    SetProperty(ref targets, "0");
+                }
+
+            }
+        }
+
+        private string damageTimes = "1";
         public string DamageTimes
         {
             get { return damageTimes; }
@@ -59,6 +78,24 @@ namespace WpfApp3.Data
             }
         }
 
+        private bool bindLastDamage = false;
+        public bool BindLastDamage
+        {
+            get { return bindLastDamage; }
+            set
+            {
+                SetProperty(ref bindLastDamage, value);
+            }
+        }
+        private bool notCritable = false;
+        public bool NotCritable
+        {
+            get { return notCritable; }
+            set
+            {
+                SetProperty(ref notCritable, value);
+            }
+        }
 
     }
 }

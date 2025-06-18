@@ -7,12 +7,13 @@
 		xmlns:AduAttach="clr-namespace:AduSkin.Controls.Attach;assembly=AduSkin"
 		xmlns:converter ="clr-namespace:WpfApp3.Common.Converter"
 		xmlns:Components ="clr-namespace:Wuhua.Main.Common.Components"
+        xmlns:extensions ="clr-namespace:Wuhua.Main.Common.Extensions"
 		mc:Ignorable="d"
 		xmlns:prism="http://prismlibrary.com/"
 		prism:ViewModelLocator.AutoWireViewModel="True" Title="器者"
 		AllowsTransparency="True"  WindowStyle="None" BorderThickness="0"
 	    OpacityMask="White" ResizeMode="NoResize" WindowStartupLocation="CenterOwner"
-        x:Name="AddRolesWindow" Height="280" Width="420" >
+        x:Name="AddRolesWindow" Height="280" Width="530" >
 	<Window.Resources>
         <ResourceDictionary>
             <DataTemplate x:Key="ListBoxItemTemplate">
@@ -44,108 +45,111 @@
 			<RowDefinition Height=" 40"/>
 		</Grid.RowDefinitions>
 		<Border x:Name="newRoleBorder"   BorderBrush="{StaticResource DefaultBorderBrush}" BorderThickness="1" CornerRadius="15" Opacity="0.9">
-			<Metro:AduNavigationPanel x:Name="navigationPanel" MaxHeight="240" MaxWidth="400" VerticalAlignment="Bottom"
+			<Metro:AduNavigationPanel x:Name="navigationPanel" MaxHeight="240" MaxWidth="550" VerticalAlignment="Bottom"
 								  
 									  Foreground="{StaticResource DefaultBrush}"
 								  IndicatorMargin="0" IndicatorHorizontalAlignment="Center"
 									  IndicatorSelectedIndex="0" IndicatorPlacement="Left">
 				<Metro:MetroScrollViewer HorizontalScrollBarVisibility="Disabled">
 					<StackPanel>
-						<Metro:AduGroupBoxLight Header="常规" Foreground="{StaticResource DefaultBrush}"  HeaderBackground="Transparent"  BorderBrush="{StaticResource DefaultBorderBrush}" Height="470" FontSize="14" Padding="10,6">
-							<Grid>
-								<Grid.RowDefinitions>
-									<RowDefinition Height="170"/>
-									<RowDefinition Height="auto"/>
-								</Grid.RowDefinitions>
-								<Grid>
-									<Grid.RowDefinitions>
-										<RowDefinition Height="34"/>
-										<RowDefinition Height="34"/>
-										<RowDefinition Height="34"/>
-										<RowDefinition Height="34"/>
-										<RowDefinition Height="34"/>
-									</Grid.RowDefinitions>
-									<Grid.ColumnDefinitions>
-										<ColumnDefinition Width="50"/>
-										<ColumnDefinition Width="auto"/>
-									</Grid.ColumnDefinitions>
-									<TextBlock  Foreground="{StaticResource DefaultBrush}" Text="角色名称" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-									<Metro:MetroTextBox Grid.Column="1" Visibility="{Binding IsEditShow,Converter={StaticResource InverseVisibilityConverter}}"  Margin="12 3"  Width="120" MaxLength="10" Text="{Binding NewRole.RoleName}"/>
-									<Metro:AduComboBox Grid.Column="1" Visibility="{Binding IsEditShow}"  Margin="12 3"  Width="120" ItemsSource="{Binding RolesList}" SelectedItem="{Binding EditRole,Mode=TwoWay}">
-										<Metro:AduComboBox.ItemTemplate>
-											<DataTemplate>
-												<Metro:MetroTextBlock Text="{Binding RoleName}" />
-											</DataTemplate>
-										</Metro:AduComboBox.ItemTemplate>
-									</Metro:AduComboBox>
-									<TextBlock Grid.Row="1" Foreground="{StaticResource DefaultBrush}" Text="基础攻击" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-									<Metro:MetroTextBox Grid.Row="1" Grid.Column="1"  Margin="12 3"  Width="120" MaxLength="10" Text="{Binding NewRole.BaseAtk}"/>
-									<TextBlock Grid.Row="2"  Foreground="{StaticResource DefaultBrush}" Text="职业" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-									<Metro:AduComboBox Grid.Row="2" Grid.Column="1"  Margin="12 3"  Width="120" ItemsSource="{Binding OccupationList}" 
-													   SelectedValuePath="Key"
-														DisplayMemberPath="Value" SelectedValue="{Binding SelectedOccupation,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" 
-													    >
-									</Metro:AduComboBox>
-									<TextBlock Grid.Row="3"  Foreground="{StaticResource DefaultBrush}" Text="深造" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-									<Metro:AduComboBox Grid.Row="3" Grid.Column="1"  Margin="12 3"  Width="120" ItemsSource="{Binding ShowDeepList}"  SelectedValue="{Binding SelectedDeep,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" >
-										<Metro:AduComboBox.ItemTemplate>
-											<DataTemplate>
-												<StackPanel Orientation="Horizontal">
-													<TextBlock Width="90"  Foreground="{StaticResource DefaultBrush}" Text="{Binding DeepInfo.DeepName}" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center">
-														<TextBlock.ToolTip>
-															<ListView ItemsSource="{Binding DeepIncres}" Style="{StaticResource StackPanelVerticalListBox}" BorderThickness="0" Background="Transparent">
-																<ListView.ItemTemplate>
-																	<DataTemplate>
-																		<StackPanel Orientation="Horizontal">
-																			<TextBlock  Foreground="{StaticResource ShadowColor}" Text="{Binding SelectedIncre.IncreName}" FontSize="12"/>
-																			<TextBlock  Foreground="{StaticResource ShadowColor}" Text=":" FontSize="12"/>
-																			<TextBlock  Foreground="{StaticResource ShadowColor}" Text="{Binding IncreNum}" FontSize="12"/>
-																		</StackPanel>
-																	</DataTemplate>
-																</ListView.ItemTemplate>
-															</ListView>
-														</TextBlock.ToolTip>
-													</TextBlock>
-													<Metro:AduFlatButton Content="X" x:Name="DelButton" VerticalAlignment="Center" Command="{Binding RelativeSource={RelativeSource AncestorType=Metro:AduComboBox},Path= DataContext.DeleDeepCommand}" CommandParameter="{Binding ElementName=DelButton, Path=DataContext}" Background="Transparent" Foreground="{StaticResource DefaultBrush}" Width="15" HorizontalAlignment="Right"/>
-												</StackPanel>
-											</DataTemplate>
-										</Metro:AduComboBox.ItemTemplate>
-									</Metro:AduComboBox>
-									<TextBlock  Grid.Row="4" Foreground="{StaticResource DefaultBrush}" Text="定位" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-									<Metro:AduComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding RoleTypeList}" SelectedValuePath="Key" 
-													   SelectedValue="{Binding SelectedRoleType}"
-														DisplayMemberPath="Value"  Margin="12 3"  Width="120" />
-								</Grid>
-								<StackPanel Grid.Row="1">
-									<ListBox ItemsSource="{Binding RoleIncreList,UpdateSourceTrigger=PropertyChanged}" BorderThickness="0" Width="230" Height="320" HorizontalContentAlignment="Left" HorizontalAlignment="Left"
-											 Style="{StaticResource StackPanelVerticalListBox}" SelectedIndex="0" 
-											  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-											  >
-										<ListBox.ItemTemplate>
-											<DataTemplate>
-												<Grid>
-													<Grid.ColumnDefinitions>
-														<ColumnDefinition Width="50"/>
-														<ColumnDefinition Width="auto"/>
-														<ColumnDefinition Width="auto"/>
-													</Grid.ColumnDefinitions>
-													<TextBlock  Foreground="{StaticResource DefaultBrush}" Text="{Binding Title}" FontSize="12"  VerticalAlignment="Center"  HorizontalAlignment="Center"/>
-													<Metro:AduComboBox Grid.Column="1" Width="100" Height="13" Margin="12,0,3,0" ItemsSource="{Binding IncreInfoList,Mode=TwoWay}"  SelectedItem="{Binding SelectedIncre,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" >
-														<Metro:AduComboBox.ItemTemplate>
-															<DataTemplate>
-																<TextBlock Text="{Binding IncreName ,Mode=TwoWay}" FontSize="12"/>
-															</DataTemplate>
-														</Metro:AduComboBox.ItemTemplate>
-													</Metro:AduComboBox>
-													<Metro:MetroTextBox  Grid.Row="7" Grid.Column="2"   Text="{Binding IncreNum,Mode=TwoWay}" Margin="3" Height="26"  Width="60" >
-													</Metro:MetroTextBox>
-												</Grid>
-											</DataTemplate>
-										</ListBox.ItemTemplate>
-									</ListBox>
-								</StackPanel>
-							</Grid>
-						</Metro:AduGroupBoxLight>
+						<Metro:AduGroupBoxLight Header="常规" Foreground="{StaticResource DefaultBrush}" HeaderBackground="Transparent"  BorderBrush="{StaticResource DefaultBorderBrush}"  FontSize="14" Padding="10,6">
+                            <StackPanel>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="34"/>
+                                            <RowDefinition Height="34"/>
+                                            <RowDefinition Height="34"/>
+                                            <RowDefinition Height="34"/>
+                                            <RowDefinition Height="34"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="50"/>
+                                            <ColumnDefinition Width="auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock  Foreground="{StaticResource DefaultBrush}" Text="角色名称" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                        <Metro:MetroTextBox Grid.Column="1" Visibility="{Binding IsEditShow,Converter={StaticResource InverseVisibilityConverter}}"  Margin="12 3"  Width="120" MaxLength="10" Text="{Binding NewRole.RoleName}"/>
+                                        <Metro:AduComboBox Grid.Column="1" Visibility="{Binding IsEditShow}"  Margin="12 3"  Width="120" ItemsSource="{Binding RolesList}" SelectedItem="{Binding EditRole,Mode=TwoWay}">
+                                            <Metro:AduComboBox.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Metro:MetroTextBlock Text="{Binding RoleName}" />
+                                                </DataTemplate>
+                                            </Metro:AduComboBox.ItemTemplate>
+                                        </Metro:AduComboBox>
+                                        <TextBlock Grid.Row="1" Foreground="{StaticResource DefaultBrush}" Text="基础攻击" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                        <Metro:MetroTextBox Grid.Row="1" Grid.Column="1"  Margin="12 3"  Width="120" MaxLength="10" Text="{Binding NewRole.BaseAtk}"/>
+                                        <TextBlock Grid.Row="2"  Foreground="{StaticResource DefaultBrush}" Text="职业" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                        <Metro:AduComboBox Grid.Row="2" Grid.Column="1"  Margin="12 3"  Width="120" ItemsSource="{Binding OccupationList}" 
+												   SelectedValuePath="Key"
+													DisplayMemberPath="Value" SelectedValue="{Binding SelectedOccupation,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" 
+												    >
+                                        </Metro:AduComboBox>
+                                        <TextBlock Grid.Row="3"  Foreground="{StaticResource DefaultBrush}" Text="深造" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                        <Metro:AduComboBox Grid.Row="3" Grid.Column="1"  Margin="12 3"  Width="120" ItemsSource="{Binding ShowDeepList}"  SelectedValue="{Binding SelectedDeep,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" >
+                                            <Metro:AduComboBox.ItemTemplate>
+                                                <DataTemplate>
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <TextBlock Width="90"  Foreground="{StaticResource DefaultBrush}" Text="{Binding DeepInfo.DeepName}" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                                            <TextBlock.ToolTip>
+                                                                <ListView ItemsSource="{Binding DeepIncres}" Style="{StaticResource StackPanelVerticalListBox}" BorderThickness="0" Background="Transparent">
+                                                                    <ListView.ItemTemplate>
+                                                                        <DataTemplate>
+                                                                            <StackPanel Orientation="Horizontal">
+                                                                                <TextBlock  Foreground="{StaticResource ShadowColor}" Text="{Binding SelectedIncre.IncreName}" FontSize="12"/>
+                                                                                <TextBlock  Foreground="{StaticResource ShadowColor}" Text=":" FontSize="12"/>
+                                                                                <TextBlock  Foreground="{StaticResource ShadowColor}" Text="{Binding IncreNum}" FontSize="12"/>
+                                                                            </StackPanel>
+                                                                        </DataTemplate>
+                                                                    </ListView.ItemTemplate>
+                                                                </ListView>
+                                                            </TextBlock.ToolTip>
+												</TextBlock>
+                                                        <Metro:AduFlatButton Content="X" x:Name="DelButton" VerticalAlignment="Center" Command="{Binding RelativeSource={RelativeSource AncestorType=Metro:AduComboBox},Path= DataContext.DeleDeepCommand}" CommandParameter="{Binding ElementName=DelButton, Path=DataContext}" Background="Transparent" Foreground="{StaticResource DefaultBrush}" Width="15" HorizontalAlignment="Right"/>
+                                                    </StackPanel>
+                                                </DataTemplate>
+                                            </Metro:AduComboBox.ItemTemplate>
+                                        </Metro:AduComboBox>
+                                        <TextBlock  Grid.Row="4" Foreground="{StaticResource DefaultBrush}" Text="定位" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                        <Metro:AduComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding RoleTypeList}" SelectedValuePath="Key" 
+												   SelectedValue="{Binding SelectedRoleType}"
+													DisplayMemberPath="Value"  Margin="12 3"  Width="120" />
+                                    </Grid>
+                                    <StackPanel Grid.Row="1">
+                                        <ListBox extensions:ListBoxWheelBehavior.ForwardWheelEvent="True" ItemsSource="{Binding RoleIncreList,UpdateSourceTrigger=PropertyChanged}" BorderThickness="0"  HorizontalContentAlignment="Left" HorizontalAlignment="Left"
+										 Style="{StaticResource StackPanelVerticalListBox}" SelectedIndex="0"
+										  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+										  >
+                                            <ListBox.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Grid>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="50"/>
+                                                            <ColumnDefinition Width="auto"/>
+                                                            <ColumnDefinition Width="auto"/>
+                                                        </Grid.ColumnDefinitions>
+                                                        <TextBlock  Foreground="{StaticResource DefaultBrush}" Text="{Binding Title}" FontSize="12"  VerticalAlignment="Center"  HorizontalAlignment="Center"/>
+                                                        <Metro:AduComboBox Grid.Column="1" Width="100" Height="13" Margin="12,0,3,0" ItemsSource="{Binding IncreInfoList,Mode=TwoWay}"  SelectedItem="{Binding SelectedIncre,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" >
+                                                            <Metro:AduComboBox.ItemTemplate>
+                                                                <DataTemplate>
+                                                                    <TextBlock Text="{Binding IncreName ,Mode=TwoWay}" FontSize="12"/>
+                                                                </DataTemplate>
+                                                            </Metro:AduComboBox.ItemTemplate>
+                                                        </Metro:AduComboBox>
+                                                        <Metro:MetroTextBox  Grid.Row="7" Grid.Column="2"   Text="{Binding IncreNum,Mode=TwoWay}" Margin="3" Height="26"  Width="60" >
+                                                        </Metro:MetroTextBox>
+                                                    </Grid>
+                                                </DataTemplate>
+                                            </ListBox.ItemTemplate>
+                                        </ListBox>
+                                    </StackPanel>
+                                </Grid>
+                                <Metro:AduFlatButton Command="{Binding AddRoleItemCommand}" Visibility="{Binding IsEditShow}"  Content="➕" Height="25" Background="Transparent" Foreground="{StaticResource DefaultBrush}"/>
+                            </StackPanel>
+                        </Metro:AduGroupBoxLight>
 						<Metro:AduGroupBoxLight Header="加成" Foreground="{StaticResource DefaultBrush}" HeaderBackground="Transparent"  BorderBrush="{StaticResource DefaultBorderBrush}"  FontSize="14" Padding="10,6">
 							<StackPanel>
 								<Grid Margin="0,8">
@@ -158,8 +162,8 @@
 									<TextBlock Grid.Column="1" Foreground="{StaticResource DefaultBrush}" Text="效果" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 									<TextBlock Grid.Column="2" Foreground="{StaticResource DefaultBrush}" Text="数值" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 								</Grid>
-								<ListBox x:Name="IncreList" ItemsSource="{Binding GameIncreList,Mode=TwoWay}"  BorderThickness="0" Width="250"  HorizontalContentAlignment="Left" HorizontalAlignment="Left"
-											 Style="{StaticResource StackPanelVerticalListBox}" SelectedIndex="0"
+                                <ListBox x:Name="IncreList" extensions:ListBoxWheelBehavior.ForwardWheelEvent="True" ItemsSource="{Binding GameIncreList,Mode=TwoWay}"  BorderThickness="0" Width="250"  HorizontalContentAlignment="Left" HorizontalAlignment="Left"
+											 Style="{StaticResource StackPanelVerticalListBox}" SelectedIndex="0" 
 											  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
 											  >
 									<ListBox.ItemTemplate>
@@ -195,15 +199,21 @@
                                         <ColumnDefinition Width="60"/>
                                         <ColumnDefinition Width="90"/>
                                         <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="50"/>
                                         <ColumnDefinition Width="64"/>
+                                        <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="50"/>
                                     </Grid.ColumnDefinitions>
                                     <Metro:MetroTextBlock Grid.Column="0" HorizontalAlignment="Center" TextAlignment="Center" Text="攻击" Margin="2" Height="26"  Width="60"/>
                                     <Metro:MetroTextBlock Grid.Column="1" HorizontalAlignment="Center" TextAlignment="Center" Text="伤害" Margin="2" Height="26"  Width="90"/>
-                                    <Metro:MetroTextBlock Grid.Column="2" HorizontalAlignment="Center" TextAlignment="Center" Text="次数" Margin="2" Height="26"  Width="50"/>
-                                    <Metro:MetroTextBlock Grid.Column="3" HorizontalAlignment="Center" TextAlignment="Center" Text="倍率/层数" Margin="2" Height="26"  Width="64"/>
+                                    <Metro:MetroTextBlock Grid.Column="2" HorizontalAlignment="Center" TextAlignment="Center" Text="目标" Margin="2" Height="26"  Width="50"/>
+                                    <Metro:MetroTextBlock Grid.Column="3" HorizontalAlignment="Center" TextAlignment="Center" Text="次数" Margin="2" Height="26"  Width="50"/>
+                                    <Metro:MetroTextBlock Grid.Column="4" HorizontalAlignment="Center" TextAlignment="Center" Text="倍率/层数" Margin="2" Height="26"  Width="64"/>
+                                    <Metro:MetroTextBlock Grid.Column="5" HorizontalAlignment="Center" TextAlignment="Center" Text="绑上段" Margin="2" Height="26"  Width="64"/>
+                                    <Metro:MetroTextBlock Grid.Column="6" HorizontalAlignment="Center" TextAlignment="Center" Text="不可暴" Margin="2" Height="26"  Width="64"/>
                                 </Grid>
-                                <ListBox ItemsSource="{Binding SkillList,Mode=TwoWay}"  BorderThickness="0" Width="270"  HorizontalContentAlignment="Left" HorizontalAlignment="Left"
-											 Style="{StaticResource StackPanelVerticalListBox}" SelectedIndex="0" x:Name="SkillListBox"
+                                <ListBox ItemsSource="{Binding SkillList,Mode=TwoWay}" extensions:ListBoxWheelBehavior.ForwardWheelEvent="True" BorderThickness="0" Width="420"  HorizontalContentAlignment="Left" HorizontalAlignment="Left"
+											 Style="{StaticResource StackPanelVerticalListBox}" SelectedIndex="0" x:Name="SkillListBox" 
 											  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
 											  >
 									<ListBox.ItemTemplate>
@@ -213,15 +223,21 @@
 													<ColumnDefinition Width="60"/>
 													<ColumnDefinition Width="90"/>
 													<ColumnDefinition Width="50"/>
+                                                    <ColumnDefinition Width="50"/>
 													<ColumnDefinition Width="64"/>
-												</Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="50"/>
+                                                    <ColumnDefinition Width="50"/>
+                                                </Grid.ColumnDefinitions>
 												<Metro:AduComboBox Width="60" Height="27" Text="攻击方式" Foreground="{StaticResource DefaultBrush}" ItemsSource="{Binding RelativeSource={RelativeSource AncestorType=ListBox},Path= DataContext.AtkTypeList}" 
 																   SelectedValuePath="Key"  DisplayMemberPath="Value" SelectedValue="{Binding AtkType,Mode=TwoWay}" FontSize="12"  VerticalAlignment="Center"  HorizontalAlignment="Center"/>
 												<Metro:AduComboBox Grid.Column="1" Width="90" Height="27" Text="伤害类型"  Foreground="{StaticResource DefaultBrush}" ItemsSource="{Binding RelativeSource={RelativeSource AncestorType=ListBox},Path= DataContext.DamageTypeList}"
 																   SelectedValuePath="Key" DisplayMemberPath="Value" SelectedValue="{Binding DamageType,Mode=TwoWay}" FontSize="12"  VerticalAlignment="Center"  HorizontalAlignment="Center"/>
-												<Metro:MetroTextBox   Grid.Column="2" Text="{Binding DamageTimes,Mode=TwoWay}" Margin="2" Height="26"  Width="44" />
-												<Metro:MetroTextBox   Grid.Column="3" Text="{Binding SkillNum,Mode=TwoWay}"  Margin="2" Height="26"  Width="56" />
-											</Grid>
+												<Metro:MetroTextBox   Grid.Column="2" Text="{Binding Targets,Mode=TwoWay}" Margin="2" Height="26"  Width="44" />
+                                                <Metro:MetroTextBox   Grid.Column="3" Text="{Binding DamageTimes,Mode=TwoWay}" Margin="2" Height="26"  Width="44" />
+                                                <Metro:MetroTextBox   Grid.Column="4" Text="{Binding SkillNum,Mode=TwoWay}"  Margin="2" Height="26"  Width="56" />
+                                                <Metro:MetroSwitch Grid.Column="5" IsChecked="{Binding BindLastDamage,Mode=TwoWay}" />
+                                                <Metro:MetroSwitch Grid.Column="6" IsChecked="{Binding NotCritable,Mode=TwoWay}" />
+                                            </Grid>
 										</DataTemplate>
 									</ListBox.ItemTemplate>
 								</ListBox>
